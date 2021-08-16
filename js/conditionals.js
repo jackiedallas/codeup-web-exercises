@@ -22,6 +22,7 @@
  */
 
 function analyzeColor(input) {
+	var input = input.toLowerCase();
 	if (input === 'blue') {
 		console.log("blue is the color of the sky")
 	} else if (input === 'red') {
@@ -46,35 +47,37 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-analyzeColor(randomColor);
+// analyzeColor(randomColor);
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-var pickAColor = prompt("What's your favorite color?")
-switch (pickAColor) {
-	case "red":
-		console.log("Strawberries are red");
-		break;
-	case "blue":
-		console.log("blue is the color of the sky");
-		break;
-	case "cyan":
-		console.log("I don't know anything about cyan");
-		break;
-	default:
-		console.log("I don't know that color");
-		break;
-
+function newColor() {
+	var userColor = prompt("What's your favorite color?");
+	switch (userColor) {
+		case "red":
+			console.log("Strawberries are red");
+			break;
+		case "blue":
+			console.log("blue is the color of the sky");
+			break;
+		case "cyan":
+			console.log("I don't know anything about cyan");
+			break;
+		default:
+			alert("I've never seen the color " + userColor + ", but it sounds beautiful!");
+			break;
+	}
 }
+// newColor();
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var userPick = prompt("Pick a color.");
-analyzeColor(userPick);
+// var userPick = prompt("Pick a color.");
+// analyzeColor(userPick);
 /* ########################################################################## */
 
 /**
@@ -97,6 +100,61 @@ analyzeColor(userPick);
  * return value.
  */
 
+var randomTotal = Math.floor(Math.random() * 100) + 1;
+// var randomNum = Math.floor(Math.random() * 6);
+// IF ELSE SYNTAX BELOW
+
+function calculateTotal(x) {
+	var total = randomTotal;
+	console.log("Lucky number is: " + luckyNumber);
+	console.log("Price before discount: " + "$" + randomTotal);
+	if (luckyNumber == 0) {
+		return "You did not win a discount today, your total is " + "$" + total;
+	} else if (luckyNumber == 1) {
+		return "You won a 10% discount, your final total is " + "$" + (total - (total * 0.1));
+	} else if (luckyNumber == 2) {
+		return "You won a 25% discount, your final total is " + "$" + (total - (total * 0.25));
+	} else if (luckyNumber == 3) {
+		return "You won a 35% discount, your final total is " + "$" + (total - (total * 0.35));
+	} else if (luckyNumber == 4) {
+		return "You won a 50% discount, your final total is " + "$" + (total - (total * 0.5));
+	} else if (luckyNumber == 5) {
+		return "You won a 100% discount, your order is FREE!";
+	}
+}
+
+// console.log(calculateTotal(luckyNumber));
+
+// SWITCH SYNTAX BELOW
+
+function calculateTotal(x) {
+	var total = randomTotal.toFixed(2);
+	// console.log("Lucky number is: " + randomNum);
+	// console.log("Price before discount: " + "$" + randomTotal);
+	switch(luckyNumber) {
+		case 0:
+			console.log("You did not win a discount today, your total is " + "$" + total);
+			break;
+		case 1:
+			console.log("You won a 10% discount, your final total is " + "$" + (total - (total * 0.1)));
+			break;
+		case 2:
+			console.log("You won a 25% discount, your final total is " + "$" + (total - (total * 0.25)));
+			break;
+		case 3:
+			console.log("You won a 35% discount, your final total is " + "$" + (total - (total * 0.35)));
+			break;
+		case 4:
+			console.log("You won a 50% discount, your final total is " + "$" + (total - (total * 0.5)));
+			break;
+		case 5:
+			console.log("You won a 100% discount, your order is FREE!");
+			break;
+	}
+}
+
+// calculateTotal(luckyNumber);
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -105,8 +163,47 @@ analyzeColor(userPick);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
+function walmartBill() {
+	var total = prompt("Good evening! What was your bill total today?")
+	console.log("Lucky number is: " + luckyNumber);
+	console.log("Price before discount: " + "$" + total);
+	switch(luckyNumber) {
+		case 0:
+			console.log("Customer's lucky number was 0, no discount was applied.");
+			console.log("Total after discount is $" + total)
+			alert("You did not win a discount today, your total is " + "$" + total);
+			break;
+		case 1:
+			console.log("Customer's lucky number was 1, 10% discount applied.");
+			console.log("Total after discount is $" + (total - (total * .10)));
+			alert("Congratulations, your lucky number was 1 and you won a 10% discount! The price before your discount was $" + total + ". Your final total is " + "$" + (total - (total * 0.10)));
+			break;
+		case 2:
+			console.log("Customer's lucky number was 2, 25% discount applied.");
+			console.log("Total after discount is $" + (total - (total * .25)))
+			alert("Congratulations, your lucky number was 2 and you won a 25% discount! The price before your discount was $" + total + ". Your final total is " + "$" + (total - (total * 0.25)));
+			break;
+		case 3:
+			console.log("Customer's lucky number was 3, 35% discount applied.");
+			console.log("Total after discount is $" + (total - (total * .35)))
+			alert("Congratulations, your lucky number was 3 and you won a 35% discount! The price before your discount was $" + total + ". Your final total is " + "$" + (total - (total * 0.35)));
+			break;
+		case 4:
+			console.log("Customer's lucky number was 4, 50% discount was applied.");
+			console.log("Total after discount is $" + (total - (total * .50)))
+			alert("Congratulations, your lucky number was 4 and you won a 50% discount! The price before your discount was $" + total + ". Your final total is " + "$" + (total - (total * 0.50)));
+			break;
+		case 5:
+			console.log("Customer's lucky number was 5, 100% discount was applied.");
+			alert("Congratulations, your lucky number was 5 and you won a 100% discount! Your order is FREE!");
+			break;
+	}
+}
+
+walmartBill();
+ // committing
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -135,34 +232,3 @@ analyzeColor(userPick);
 
 
 
-// console.log("hello conditionals");
-//
-// var hometown = prompt("Where did you grow up?");
-// 	if (hometown === "Mobile") {
-// 		alert("Wow, small world. That's my hometown too!")
-// 	} else {
-// 		var userR = prompt("I've never heard of there before, what's it like?");
-// 		console.log("User grew up in: " + hometown)
-// 		console.log("User described their hometown as: " + userR)
-// 	}
-// 	alert("Wow that seems like an amazing place!");
-//
-//
-//
-// var favoritePlayer = prompt("Who's your favorite NBA player? (Dead or Alive)");
-// switch (favoritePlayer) {
-// 	case "Kobe":
-// 		alert("I agree, Kobe is most definitely the GOAT!");
-// 		break;
-// 	case "MJ":
-// 		alert("Not a bad favorite, MJ is in everybody's top 3.");
-// 		break;
-// 	case "LeBron":
-// 		alert("You mean Lebrick? Lol, just kidding he's an all time great.")
-// 		break;
-// 	default:
-// 		alert(favoritePlayer + " isn't my favorite but I respect the guy.");
-// 		break;
-//
-// }
-// console.log("User's favorite player is " + favoritePlayer);
