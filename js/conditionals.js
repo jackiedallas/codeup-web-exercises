@@ -47,7 +47,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-// analyzeColor(randomColor);
+analyzeColor(randomColor);
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
@@ -69,15 +69,15 @@ function newColor() {
 			break;
 	}
 }
-// newColor();
+newColor();
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// var userPick = prompt("Pick a color.");
-// analyzeColor(userPick);
+var userPick = prompt("Pick a color.");
+analyzeColor(userPick);
 /* ########################################################################## */
 
 /**
@@ -153,7 +153,7 @@ function calculateTotal(x) {
 	}
 }
 
-// calculateTotal(luckyNumber);
+calculateTotal(luckyNumber);
 
 /**
  * TODO:
@@ -202,8 +202,8 @@ function walmartBill() {
 	}
 }
 
-//walmartBill();
- // committing
+walmartBill();
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -228,18 +228,24 @@ function numbers() {
 		var pickedNum = parseInt(userNumber);
 		if (pickedNum % 2 === 0 && pickedNum > 0) {
 			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also even and positive.");
+			console.log("User's number plus 100 is " + (pickedNum + 100) + ". User's number is also even and positive.");
 		} else if (pickedNum % 2 !== 0 && pickedNum < 0) {
 			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also odd and negative.");
+			console.log("User's number plus 100 is " + (pickedNum + 100) + ". User's number is also odd and negative.");
 		} else if (pickedNum % 2 === 0 && pickedNum < 0) {
 			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also even and negative.");
+			console.log("User's number plus 100 is " + (pickedNum + 100) + ". User's number is also even and negative.");
 		} else if (pickedNum % 2 !== 0 && pickedNum > 0) {
 			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also odd and positive.");
+			console.log("User's number plus 100 is " + (pickedNum + 100) + ". User's number is also odd and positive.");
 		} else {
 			alert("That is not a number.")
+			console.log("User's didn't typed something other than a number.")
 		}
 
 	} else {
 		alert("Smh, you're no fun!");
+		console.log("User didn't want to pick a number.");
 	}
 }
 numbers();
