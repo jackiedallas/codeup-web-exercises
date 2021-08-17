@@ -69,7 +69,7 @@ function newColor() {
 			break;
 	}
 }
-newColor();
+// newColor();
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -240,7 +240,7 @@ function numbers() {
 			console.log("User's number plus 100 is " + (pickedNum + 100) + ". User's number is also odd and positive.");
 		} else {
 			alert("That is not a number.")
-			console.log("User's didn't typed something other than a number.")
+			console.log("User typed something other than a number.")
 		}
 
 	} else {
