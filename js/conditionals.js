@@ -202,7 +202,7 @@ function walmartBill() {
 	}
 }
 
-walmartBill();
+//walmartBill();
  // committing
 /**
  * TODO:
@@ -221,9 +221,52 @@ walmartBill();
  * HINT: The way we prompt for a value could be improved
  */
 
+function numbers() {
+	var pickaNumber = confirm("Would you like to pick a number?");
+	if (pickaNumber === true) {
+		var userNumber = prompt("Pick your number.");
+		var pickedNum = parseInt(userNumber);
+		if (pickedNum % 2 === 0 && pickedNum > 0) {
+			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also even and positive.");
+		} else if (pickedNum % 2 !== 0 && pickedNum < 0) {
+			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also odd and negative.");
+		} else if (pickedNum % 2 === 0 && pickedNum < 0) {
+			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also even and negative.");
+		} else if (pickedNum % 2 !== 0 && pickedNum > 0) {
+			alert("Your number plus 100 is " + (pickedNum + 100) + ". Your number is also odd and positive.");
+		} else {
+			alert("That is not a number.")
+		}
+
+	} else {
+		alert("Smh, you're no fun!");
+	}
+}
+numbers();
 
 
-
+//Still working through bugs for below switch statement
+// switch(pickedNum) {
+// 	case pickedNum:
+// 		alert("Your number plus 100 is " + (pickedNum + 100));
+// 		break;
+// 	case pickedNum % 2 === 0:
+// 		alert("Your number is even.");
+// 		break;
+// 	case pickedNum % 2 !== 0:
+// 		alert("Your number is odd.");
+// 		break;
+// 	case pickedNum < 0:
+// 		alert("Your number is negative.");
+// 		break;
+// 	case pickedNum > 0:
+// 		alert("Your number is positive.");
+// 		break;
+// 	// default:
+// 	// 	alert("That is not a number.")
+// 	// 	break;
+//
+//
 
 
 
