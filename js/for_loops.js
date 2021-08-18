@@ -40,11 +40,15 @@ for (var i = 1; i <= 10; i++) {
 // }
 // // logTriangle();
 //
-// for (var i = 1; i <= 10; i++) {
-// 	if(i < 10) {
-// 		console.log(i.toString() + i.toString());
-// 	}
-// }
+console.log('');
+console.log("Loop & Concatenate...")
+for (var i = 1; i < 10; i++) {
+	var result = '';
+	for (var j = 1; j <= i; j++) {
+		result = result + i.toString();
+	}
+	console.log(result);
+}
 console.log(" ");
 console.log("Numbers divisible by 5 from 100 to 0...");
 for (i = 100; i > 0; i--) {
