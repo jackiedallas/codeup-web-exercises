@@ -1,6 +1,17 @@
 'use strict'
 
-var isAWeekDay = confirm("Is it a weekday?");
-var between9_5 = confirm("Is it between 9 AM and 5 PM?")
-
-console.log("Is Jackie in class? " + (isAWeekDay && between9_5))
+console.log("Ice Cream Seller question...");
+console.log('');
+// Still figuring this one out...
+function iceCreamSeller(x, y) {
+	// var conesToSell = Math.floor(Math.random() * 50) + 50;
+	// var conesBought = Math.floor(Math.random() * 5) + 1;
+	do{
+		if (true) {
+			var conesBought = x - y;
+			console.log("I just sold " + conesBought + " ice cream cones.")
+			x--;
+		}
+	} while(x >= 8)
+}
+iceCreamSeller(10, 2);

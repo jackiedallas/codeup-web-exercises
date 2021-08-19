@@ -24,11 +24,11 @@ console.log('');
 console.log("Ice Cream Seller question...");
 console.log('');
 // Still figuring this one out...
-// function iceCreamSeller() {
-// 	var conesToSell = Math.floor(Math.random() * 50) + 50;
-// 	do{
-// 		var conesBought = Math.floor(Math.random() * 5) + 1;
-//
-// 	} while()
-// }
+function iceCreamSeller() {
+	var conesToSell = Math.floor(Math.random() * 50) + 50;
+	do{
+		alert("I have " + conesToSell + " would you like to buy some?")
+
+	} while(false)
+}
 // iceCreamSeller();
