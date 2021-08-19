@@ -33,7 +33,9 @@ function analyzeColor(input) {
 		console.log("I don't know the color " + input)
 	}
 }
-
+analyzeColor("blue");
+analyzeColor("red");
+analyzeColor("cyan");
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -78,6 +80,7 @@ function newColor() {
  */
 var userPick = prompt("Pick a color.");
 analyzeColor(userPick);
+alert(userPick);
 /* ########################################################################## */
 
 /**
