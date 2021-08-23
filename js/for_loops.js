@@ -17,12 +17,18 @@ showMultiplicationTable(num);
 console.log(' ');
 console.log("Random numbers between 20 and 200...")
 for (var i = 1; i <= 10; i++) {
+	// Random Formula
+	// Math.floor(Math.random() * (max - min)) + min
 	var randomNum = Math.floor(Math.random() * (200 - 20)) + 20;
 	if (randomNum % 2 === 0) {
 		console.log(randomNum + " is even.")
 	} else if (randomNum % 2 !== 0) {
 		console.log(randomNum + " is odd.")
 	}
+	// Ternary
+	// var randomNum = Math.floor(Math.random() * (200 - 20)) + 20;
+	// var oddOrEven = randNum % 2 == 0 ? "even" : "odd";
+	// console.log(randNum + " is " + oddOrEven);
 
 }
 // Still trying to figure this one out.
@@ -49,6 +55,7 @@ for (var i = 1; i < 10; i++) {
 	}
 	console.log(result);
 }
+
 console.log(" ");
 console.log("Numbers divisible by 5 from 100 to 0...");
 for (i = 100; i > 0; i--) {
