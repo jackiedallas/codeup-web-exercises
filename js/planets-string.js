@@ -24,7 +24,15 @@ console.log(planetsArray);
  */
 
 var newPlanetsString = planetsArray.join("<br>");
-console.log(newPlanetsString);
+var newPlanetsString2 = planetsArray.join('<li>')
+// console.log(newPlanetsString);
 
+var planetsHTML = '<ul><li>' + newPlanetsString2 + '</li></ul>';
 
+// document.writeln(newPlanetsString);
+document.writeln(planetsHTML);
+console.log(planetsHTML);
 
+var planetsHTML2 = '<ol><li>' + newPlanetsString2 + '</li></ol>';
+document.writeln(planetsHTML2);
+console.log(planetsHTML2)
