@@ -114,15 +114,29 @@ for (let i = 0; i < myCar.features.length; i++) {
 //Let's try nesting this object inside of our car object we've been building out
 
 // TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
-var currentOwner = {
+myCar.owner = {
     firstName: "jackie",
     lastName: "dallas",
     age: 29,
     dateOfBirth: "08/01/1992",
-   registrationLocation: "Bexar County, Texas"
+    registrationLocation: "Bexar County, Texas"
 }
 //An object can also contain within itself a method (function). We can set it up similarly to our properties, but with a value that is the function expression
-myCar.owner = currentOwner;
+// property: num
+// property: 'string'
+// * property: function() {.......} // NOTE: no function NAME!
+var turnMyCarOn = function() {
+    alert("Putting the key in the ignition and fired up the " + this.make + " " + this.model);
+}
+
+//Option A:
+// myCar.turnOn = turnMyCarOn();
+
+//Option B:
+myCar.turnOn = function() {
+    alert("Putting the key in the ignition and fired up the " + this.make + " " + this.model);
+};
+// myCar.turnOn();
 
 /*
 * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -131,9 +145,49 @@ myCar.owner = currentOwner;
 */
 
 //Let's tie some things together: Let's make a garage with another car!
+var sigOtherCar = {
+    make: 'chevrolet',
+    model: 'cruze',
+    year: '2020',
+    turnOn: turnMyCarOn
+}
+
+
+
+
 
 //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
 //Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
-
+// garage.forEach(function (car){
+//     car.turnOn();
+// })
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
+// var dreamCar = {
+//     speeding: speedTicket,
+//     make: 'audi',
+//     model: 'rs7',
+//     trim: 'sportback',
+//     year: 2022,
+//     price: 100000,
+//     acceleration: 3.5,
+//     horsepower: 592,
+//     fuel: 'premium'
+// }
+//
+// dreamCar.features = ['valcona leather', 'panoramic sunroof', 'tire pressure monitoring system', 'cruise control'];
+//
+//
+//
+// var newgarage = [myCar, sigOtherCar, dreamCar];
+// console.log(newgarage);
+//
+// var speedTicket = function() {
+//     alert("I got a speeding ticket in my " + this.year + " " + this.make + " " + this.model + "." )
+// }
+//
+// dreamCar.speeding = speedTicket()
+//
+// newgarage.forEach(function (car){
+//     car.speedingTicket();
+// })
