@@ -31,7 +31,7 @@ person.sayHello = function (){
     console.log("Hello from " + this.firstName + " " + this.lastName + "!")
 }
 
-// person.sayHello();
+person.sayHello();
 
 /** TODO:
  * HEB has an offer for the shoppers that buy products amounting to
@@ -53,17 +53,17 @@ var shoppers = [
     {name: 'George', amount: 320}
 ];
 
-// function amountWithDiscount(amount){
-//     return shopper.amount - (shopper.amount * (12 / 100));
-// }
+function amountWithDiscount(amount){
+    return shopper.amount - (shopper.amount * (12 / 100));
+}
 
-// shoppers.forEach(function (shopper) {
-//     if(shopper.amount < 200){
-//         console.log(shopper.name + " only spent " + shopper.amount + ". He does not qualify for a discount. His final total is " + shopper.amount + ".");
-//     } else{
-//         console.log(shopper.name + " spent $" + shopper.amount + ". He qualifies for the discount. His final total is " + (shopper.amount - (shopper.amount * (12 / 100))) + ".")
-//     }
-// })
+shoppers.forEach(function (shopper) {
+    if(shopper.amount < 200){
+        console.log(shopper.name + " only spent " + shopper.amount + ". He does not qualify for a discount. His final total is " + shopper.amount + ".");
+    } else{
+        console.log(shopper.name + " spent $" + shopper.amount + ". He qualifies for the discount. His final total is " + (shopper.amount - (shopper.amount * (12 / 100))) + ".")
+    }
+})
 
 /** TODO:
  * Create an array of objects that represent books and store it in a
@@ -121,9 +121,10 @@ var book5 = {
 
 var books = [book1, book2, book3, book4, book5];
 
-// console.log(books[0].title);
-// console.log(books[0].yearPublished)
-// console.log(books[0].author)
+console.log(books[0].title);
+console.log(books[0].yearPublished)
+console.log(books[0].author)
+console.log("-------------")
 
 /**
  * TODO:
@@ -150,18 +151,6 @@ var books = [book1, book2, book3, book4, book5];
  *      ...
  */
 
-// function bookIndex(array) {
-//     console.log(array)
-// }
-
-// for (var i = 0; i <= books.length; i++) {
-//     for (var j = 0; j < i; j++) {
-//
-//         console.log(books.title);
-//
-//     }
-//     console.log("Book No. " + (books[i + 1]));
-// }
 
 books.forEach(function (book, index) {
     if (index < books.length) {
@@ -185,8 +174,10 @@ books.forEach(function (book, index) {
  *   outputs the information described above. Refactor your loop to use your
  *   `showBookInfo` function.
  */
-
+// Not right, still working.
 function createBook(title, author){
-
+    if(title === books.title && author === books.author){
+        console.log(books.yearPublished);
+    }
 }
-
+createBook('Clean Code', 'Robert Martin')
