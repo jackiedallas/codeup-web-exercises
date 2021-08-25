@@ -16,3 +16,13 @@
 // }
 // iceCreamSeller(10, 2);
 
+
+
+function rollSixSided(numberOfRolls){
+
+	for (var i = 0; i < numberOfRolls; i++) {
+		var dice = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+		console.log("You rolled a " + dice);
+	}
+}
+rollSixSided(50);
