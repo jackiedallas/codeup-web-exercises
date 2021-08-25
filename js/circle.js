@@ -15,6 +15,7 @@ var circle = {
         // TODO: complete this method.
         if (doRounding === true) {
             console.log(Math.round(this.getArea()));
+
         } else {
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
