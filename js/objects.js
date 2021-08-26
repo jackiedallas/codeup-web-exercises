@@ -28,7 +28,7 @@ console.log(person.lastName)
  */
 
 person.sayHello = function (){
-    alert("Hello from " + this.firstName + " " + this.lastName + "!")
+    // alert("Hello from " + this.firstName + " " + this.lastName + "!")
     console.log("Hello from " + this.firstName + " " + this.lastName + "!")
 }
 
@@ -62,7 +62,7 @@ shoppers.forEach(function (shopper) {
     if(shopper.amount < 200){
         console.log(shopper.name + " only spent " + shopper.amount + ". He does not qualify for a discount. His final total is " + shopper.amount + ".");
     } else{
-        console.log(shopper.name + " spent $" + shopper.amount + ". He qualifies for the discount. His final total is " + (shopper.amount - (shopper.amount * (12 / 100))) + ".")
+        console.log(shopper.name + " spent $" + shopper.amount + ". He qualifies for the 12% discount. His final total is " + (shopper.amount - (shopper.amount * (12 / 100))) + ".")
     }
 })
 
@@ -120,11 +120,11 @@ var book5 = {
     yearPublished: 2001
 }
 
-var books = [book1, book2, book3, book4, book5];
+// var books = [book1, book2, book3, book4, book5];
 
-console.log(books[0].title);
-console.log(books[0].yearPublished)
-console.log(books[0].author)
+// console.log(books[0].title);
+// console.log(books[0].yearPublished)
+// console.log(books[0].author)
 console.log("-------------")
 
 /**
@@ -153,15 +153,15 @@ console.log("-------------")
  */
 
 
-books.forEach(function (book, index) {
-    if (index < books.length) {
-        console.log("Book No. " + (index + 1));
-        console.log("Title: " + book.title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-        console.log("Year Published: " + book.yearPublished);
-        console.log("----------")
-    }
-})
+// books.forEach(function (book, index) {
+//     if (index < books.length) {
+//         console.log("Book No. " + (index + 1));
+//         console.log("Title: " + book.title);
+//         console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+//         console.log("Year Published: " + book.yearPublished);
+//         console.log("----------")
+//     }
+// })
 
 
 
@@ -177,8 +177,31 @@ books.forEach(function (book, index) {
  */
 // Not right, still working.
 function createBook(title, author){
-    if(title === books.title && author === books.author){
-        console.log(books.yearPublished);
+    // get name array
+    var nameArr = name.split(" ");
+    var firstName = nameArr[0];
+    var lastName = nameArr[1];
+    return {
+        title: title,
+        author: {
+            firstName: firstName,
+            lastName: lastName
+        }
     }
+    // if(title === books.title && author === books.author){
+    //     console.log(books.yearPublished);
+    // } code that I wrote
 }
-createBook('Clean Code', 'Robert Martin')
+var books = [
+    createBook('The Autobiography of Malcolm X', 'Alex Haley')
+];
+
+function showBookInfo(book){
+    console.log("Title: " + book.title);
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    console.log("-----")
+}
+books.forEach(function (book, index) {
+    console.log("Book No. " + (index + 1));
+    showBookInfo(book);
+});
