@@ -14,7 +14,8 @@ let person = {
     firstName: 'Jackie',
     lastName: 'Dallas'
 };
-
+console.log(person.firstName)
+console.log(person.lastName)
 
 /**
  * TODO:
