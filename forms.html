@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register With Us</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		form {
+            text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Register With Us</h1>
+	<form method="POST" action="https://request-inspector.glitch.me/">
+		<label for="bio">Tell us about yourself..</label>
+		<br>
+		<textarea id="bio" name="info" placeholder="Short description..."></textarea>
+		<br>
+		<p>How did you hear about us?</p>
+		<input type="radio" id="billboard" name="option1" value="billboard">
+		<label for="billboard">Billboards</label><br>
+		<input type="radio" id="radioAds" name="option2" value="radio advertisement">
+		<label for="radioAds">Radio Advertisement</label><br>
+		<input type="radio" id="internetAds" name="option3" value="internet advertisement">
+		<label for="internetAds">Internet Advertisement</label><br>
+		<input type="radio" id="other" name="option4" value="others">
+		<label for="other">Other</label><br>
+		<br>
+		<label for="browser">Which browser are you using?</label><br>
+		<select id="browser">
+			<option name="browser1" value="safari">Safari</option>
+			<option name="browser2" value="chrome">Google Chrome</option>
+			<option name="browser3" value="firefox">Fire Fox</option>
+		</select>
+		<br>
+		<br>
+		<label for="email">E-Mail Address:</label>
+		<br>
+		<input type="text" id="email" name="email1" placeholder="Enter your e-mail address">
+		<br>
+		<label for="password">Password:</label>
+		<br>
+		<input type="password" id="password" name="password" placeholder="Enter your password">
+		<br>
+		<br>
+		<button type="submit" onclick="alert('Thanks for Registering!')">Register</button>
+	</form>
+</body>
+</html>
