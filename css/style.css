@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+.fancy-header{
+    color: purple;
+    text-align: center
+}
+a:hover{
+    color: red;
+}
+h2{
+    text-decoration: underline;
+}
