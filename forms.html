@@ -19,40 +19,59 @@
 	</style>
 </head>
 <body>
-	<h1>Register With Us</h1>
-	<form method="POST" action="https://hookb.in/YVDO39dWxkTQERGGEOYE">
-		<label for="bio">Tell us about yourself..</label>
-		<br>
-		<textarea id="bio" name="info" placeholder="Short description..."></textarea>
-		<br>
-		<p>How did you hear about us?</p>
-		<input type="radio" id="billboard" name="option1" value="billboard">
-		<label for="billboard">Billboards</label><br>
-		<input type="radio" id="radioAds" name="option2" value="radio advertisement">
-		<label for="radioAds">Radio Advertisement</label><br>
-		<input type="radio" id="internetAds" name="option3" value="internet advertisement">
-		<label for="internetAds">Internet Advertisement</label><br>
-		<input type="radio" id="other" name="option4" value="others">
-		<label for="other">Other</label><br>
-		<br>
-		<label for="browser">Which browser are you using?</label><br>
-		<select name="browser" id="browser">
-			<option name="browser" value="safari">Safari</option>
-			<option name="chrome" value="chrome">Google Chrome</option>
-			<option name="mozilla" value="firefox">Fire Fox</option>
-		</select>
-		<br>
-		<br>
-		<label for="email">E-Mail Address:</label>
-		<br>
-		<input type="text" id="email" name="email1" placeholder="Enter your e-mail address">
-		<br>
-		<label for="password">Password:</label>
-		<br>
-		<input type="password" id="password" name="password" placeholder="Enter your password">
-		<br>
-		<br>
-		<button type="submit" onclick="alert('Thanks for Registering!')">Register</button>
-	</form>
+	<header>
+		<h1>Register With Us</h1>
+	</header>
+	<main>
+		<section>
+			<div>
+				<form method="POST" action="https://hookb.in/YVDO39dWxkTQERGGEOYE">
+					<section>
+						<label for="bio">Tell us about yourself..</label>
+						<br>
+						<textarea id="bio" name="info" placeholder="Short description..."></textarea>
+					</section>
+					<br>
+					<section>
+						<p>How did you hear about us?</p>
+						<input type="radio" id="billboard" name="option1" value="billboard">
+						<label for="billboard">Billboards</label><br>
+						<input type="radio" id="radioAds" name="option2" value="radio advertisement">
+						<label for="radioAds">Radio Advertisement</label><br>
+						<input type="radio" id="internetAds" name="option3" value="internet advertisement">
+						<label for="internetAds">Internet Advertisement</label><br>
+						<input type="radio" id="other" name="option4" value="others">
+						<label for="other">Other</label><br>
+					</section>
+					<br>
+					<section>
+						<label for="browser">Which browser are you using?</label><br>
+						<select name="browser" id="browser">
+							<option name="browser" value="safari">Safari</option>
+							<option name="chrome" value="chrome">Google Chrome</option>
+							<option name="mozilla" value="firefox">Fire Fox</option>
+						</select>
+					</section>
+					<br>
+					<br>
+					<section>
+						<label for="email">E-Mail Address:</label>
+						<br>
+						<input type="text" id="email" name="email" placeholder="Enter your e-mail address">
+						<br>
+						<label for="password">Password:</label>
+						<br>
+						<input type="password" id="password" name="password" placeholder="Enter your password">
+					</section>
+					<br>
+					<footer>
+						<button type="submit" onclick="alert('Thanks for Registering!')">Register</button>
+						<br>
+						<input name="newsletter" value="true" type="checkbox">Sign Up for Newsletter
+					</footer>
+				</form>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
