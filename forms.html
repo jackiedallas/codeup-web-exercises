@@ -5,22 +5,27 @@
 	<title>Register With Us</title>
 	<style>
 		body{
-			background-color: teal;
-			color: gold;
+			background-color: antiquewhite;
+			color: black;
             font-family: monospace;
 			font-size: larger;
 		}
 		h1 {
 			text-align: center;
+			color: red;
 		}
 		form {
             text-align: center;
+		}
+		select{
+			width: 190px;
+			text-align-last: center;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Register With Us</h1>
+		<h1>Veridian Dynamics Registration Form</h1>
 	</header>
 	<main>
 		<section>
@@ -29,30 +34,35 @@
 					<section>
 						<label for="bio">Tell us about yourself..</label>
 						<br>
-						<textarea id="bio" name="info" placeholder="Short description..."></textarea>
+						<textarea cols="30" rows="10" id="bio" name="info" placeholder="Short description..."></textarea>
+					</section>
+					<br>
+					<section>
+						<label for="birthdate">When is your Birthday?</label><br>
+						<input type="date" id="birthdate" name="birthdate">
 					</section>
 					<br>
 					<section>
 						<p>How did you hear about us?</p>
-						<input type="radio" id="billboard" name="option1" value="billboard">
+						<input type="checkbox" id="billboard" name="option1" value="billboard">
 						<label for="billboard">Billboards</label><br>
-						<input type="radio" id="radioAds" name="option2" value="radio advertisement">
+						<input type="checkbox" id="radioAds" name="option2" value="radio advertisement">
 						<label for="radioAds">Radio Advertisement</label><br>
-						<input type="radio" id="internetAds" name="option3" value="internet advertisement">
+						<input type="checkbox" id="internetAds" name="option3" value="internet advertisement">
 						<label for="internetAds">Internet Advertisement</label><br>
-						<input type="radio" id="other" name="option4" value="others">
+						<input type="checkbox" id="other" name="option4" value="others">
 						<label for="other">Other</label><br>
 					</section>
 					<br>
 					<section>
 						<label for="browser">Which browser are you using?</label><br>
 						<select name="browser" id="browser">
-							<option name="browser" value="safari">Safari</option>
+							<option value="" disabled selected>--Please choose an option--</option>
+							<option style="ali: center" name="browser" value="safari">Safari</option>
 							<option name="chrome" value="chrome">Google Chrome</option>
 							<option name="mozilla" value="firefox">Fire Fox</option>
 						</select>
 					</section>
-					<br>
 					<br>
 					<section>
 						<label for="email">E-Mail Address:</label>
