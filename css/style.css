@@ -1,12 +1,22 @@
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid navy;
     text-align: center;
 }
-.fancy-header{
+
+th {
+    background-color: whitesmoke;
+    border: 2px solid darkgoldenrod;
+}
+
+td {
+    background-color: rgba(255, 78, 37, 0.5);
+}
+
+.fancy-header {
     color: #c00015;
     text-align: center
 }
-a:hover{
+a:hover {
     color: red;
 }
 h2{
@@ -23,12 +33,14 @@ ul, ol {
     list-style-position: inside;
 
 }
-table{
+table {
     margin-left: auto;
     margin-right: auto;
+    width: 75%;
+    border: 2px solid #c00015;
 
 }
-.dot{
+.dot {
     height: 25px;
     width: 25px;
     background-color: #bbb;
@@ -55,3 +67,13 @@ hr{
     border: none;
     background-color: navy;
 }
+
+li:hover {
+    color: hotpink;
+
+}
+
+/*#underline-imp {*/
+/*    text-decoration: underline;*/
+
+/*}*/
