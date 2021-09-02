@@ -1,66 +1,64 @@
-table, th, td {
-    border: 2px solid navy;
+body {
     text-align: center;
-}
-
-th {
-    background-color: whitesmoke;
-    border: 2px solid darkgoldenrod;
-}
-
-td {
-    background-color: rgba(255, 78, 37, 0.5);
+    background-image: linear-gradient(white, teal);
+    font-family: 'Quicksand', sans-serif;
+    /*transform: rotateZ(0deg);*/
+    /*background-color: rgba(239, 235, 228, 0.75);*/
 }
 
 .fancy-header {
-    color: #c00015;
-    text-align: center
-}
-a:hover {
-    color: red;
-}
-h2{
-color: darkgoldenrod;
-}
-body {
+    color: #cc88ff;
     text-align: center;
+    /*transform: rotateY(180deg);*/
+    /*transform: rotateX(180deg);*/
 
-    font-family: 'Quicksand', sans-serif;
-    background-color: rgba(239, 235, 228, 0.75);
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #ab0101;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    display: inline-block;
+    /*transform: scale(2, 1.5);*/
+    /*transform: translate(100px, 50px);*/
+}
+
+h2 {
+    font-weight: bolder;
+    background-color: rgba(180, 15, 15, 0.1);
+}
+
+#no-bullets ul {
+    /*descendent selector*/
+    list-style-type: none;
+}
+
 ul, ol {
     padding-left: 0;
     list-style-position: inside;
 
 }
+
+li:hover {
+    color: hotpink;
+}
+
 table {
     margin-left: auto;
     margin-right: auto;
     width: 75%;
     border: 2px solid #c00015;
+    background-color: rgba(180, 14, 14, 0.19);
 
 }
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-#no-bullets ul {
-    /*descendent selector*/
-    list-style-type: none;
-}
+
 div>ul {
     /*direct child selector*/
     list-style-type: square;
 }
-.first-up{
-    color: #c00015;
-}
-.second-up{
-    color: green;
-}
+
 hr{
     /*color: whitesmoke;*/
     height: 2px;
@@ -68,12 +66,65 @@ hr{
     background-color: navy;
 }
 
-li:hover {
-    color: hotpink;
-
+th, td {
+    border: 2px solid navy;
+    text-align: center;
 }
+
+th {
+    background-color: whitesmoke;
+    border: 2px solid darkgoldenrod;
+    font-size: large;
+}
+
+td {
+    background-color: #e0aeae;
+    font-size: large;
+}
+
+a:hover {
+    color: red;
+}
+
+/*.first-up{*/
+/*    !*color: #c00015;*!*/
+/*    color: whitesmoke;*/
+/*}*/
+/*.second-up{*/
+/*    color: whitesmoke;*/
+/*}*/
+
+/*<!--*/
+/*Why use rgb to define a CSS color vs. a hex value?*/
+/*-There aren't any differences between rgb and 6 digit hex other than the way the information is communicated to the screen. However, when you use RGB(A-alpha 0.0 fully transparent - 1.0 not transparent) you can add opacity.*/
+
+/*What is the difference between 3 digit hex values and 6?*/
+/*-3 digit hex code is shorthand for some 6 digit hex codes. The 3 digit hex code follows the form of #rgb. Example: #fc9 is the same as #ffcc99, #f0f is the same as #ff00ff, and #b58 is the same as #bb5588.*/
+/*-->*/
+
+/*===== GROUP 2 - Color Properties*/
+/*                Prepare code examples to present answers to the following questions:*/
+/*                How does hexadecimal color coding work?*/
+/*                Why use CSS color names over hex values and vice versa?*/
+/*                Why use rgb to define a CSS color vs. a hex value?*/
+/*                What is the difference between 3 digit hex values and 6?*/
+/*'background' and 'background-color' properties can produce the same output; why is this possible?*/
+/*                                                                            What is the 'a' in rgba?*/
+/*                                                                                            What is the 'Digital Color Meter' on a Mac? How is the helpful?*/
+/*                                                                                                                              BONUS (if time)*/
+/*What are CSS gradients?*/
+
+
+
+
+
+/*tbody {*/
+/*    background-color: purple;*/
+/*}*/
 
 /*#underline-imp {*/
 /*    text-decoration: underline;*/
 
 /*}*/
+
+/*background: #444 url("image.jpg) no-repeat left top;*/
