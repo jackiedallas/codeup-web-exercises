@@ -1,0 +1,13 @@
+.fancy-header {
+    color: red;
+    text-decoration: underline;
+
+}
+hr {
+    /* built a box with a hr tag */
+    background-color: aqua;
+    height: 500px;
+    width: 50%;
+    border: 50px solid deeppink;
+
+}
