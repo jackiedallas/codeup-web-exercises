@@ -10,20 +10,23 @@ a:hover{
     color: red;
 }
 h2{
-
+color: darkgoldenrod;
 }
 body {
     text-align: center;
-    list-style-position: inside;
+
     font-family: 'Quicksand', sans-serif;
-    background-color: rgba(82, 78, 37, 0.75);
+    background-color: rgba(239, 235, 228, 0.75);
 }
 ul, ol {
     padding-left: 0;
+    list-style-position: inside;
+
 }
 table{
     margin-left: auto;
     margin-right: auto;
+
 }
 .dot{
     height: 25px;
@@ -31,4 +34,24 @@ table{
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+}
+#no-bullets ul {
+    /*descendent selector*/
+    list-style-type: none;
+}
+div>ul {
+    /*direct child selector*/
+    list-style-type: square;
+}
+.first-up{
+    color: #c00015;
+}
+.second-up{
+    color: green;
+}
+hr{
+    /*color: whitesmoke;*/
+    height: 2px;
+    border: none;
+    background-color: navy;
 }
