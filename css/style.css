@@ -16,6 +16,7 @@ body {
     text-align: center;
     list-style-position: inside;
     font-family: 'Quicksand', sans-serif;
+    background-color: rgba(82, 78, 37, 0.75);
 }
 ul, ol {
     padding-left: 0;
@@ -23,4 +24,11 @@ ul, ol {
 table{
     margin-left: auto;
     margin-right: auto;
+}
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
 }
