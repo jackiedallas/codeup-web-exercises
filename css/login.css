@@ -46,12 +46,16 @@ fieldset {
 }
 
 .form-label {
+    padding-left: 8px;
     font-weight: bold;
     /* The text of a label must be bold */
 }
 
 .btn-block {
-    width: 100%;
+    width: 98.5%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
     /* This element should use 100% of the width */
 }
 
@@ -60,7 +64,7 @@ fieldset {
     color: white;
     font-weight: bold;
     border: 1px lightgray;
-    width: calc(98.5% - 8px);
+    /*width: calc(98.5% - 8px);*/
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
@@ -71,9 +75,10 @@ fieldset {
     /*padding-left: 1em;*/
     padding-top: 4px;
     padding-bottom: 4px;
+    margin-left: 5px;
     margin-top: .5em;
     margin-bottom: .5em;
-    width: calc(98% - 8px);
+    width: calc(100% - 15px);
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
 
