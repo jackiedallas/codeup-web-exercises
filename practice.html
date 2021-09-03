@@ -4,9 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Practice</title>
 	<script src="js/practice.js"></script>
-
+	<style>
+		.btn {
+			width: 96px;
+			height: 48px;
+			font-size: 24px;
+		}
+	</style>
 </head>
 <body>
 <h1>Practice Page</h1>
+<button type="button" class="btn" onclick="onClick()" id="buttons">0</button>
+
+
+<script type="text/javascript">
+	var clicks = 0;
+	function onClick() {
+		buttons.innerHTML = ++clicks
+	}
+</script>
 </body>
 </html>

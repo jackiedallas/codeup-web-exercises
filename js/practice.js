@@ -163,3 +163,33 @@ function sumOfSquares(num1, num2) {
 		return false;
 	}
 }
+
+//Find a vowel at the beginning and end with RegEx
+//  ^ => first item matches:
+// () => stores matching value captured within
+// [aeiou] => matches any of the characters in the brackets
+// . => matches any character:
+// + => for 1 or more occurrances (this ensures str length > 3)
+// \1 => matches to previously stored match.
+// \2 looks for matched item stored 2 instances ago
+// \3 looks for matched item stored 3 ago, etc
+
+//  $ ensures that matched item is at end of the sequence
+function startEndVowel(){
+let re = /^([aeiou]).*\1$/i;
+
+return re;
+
+}
+// if (button){
+// 	button.addEventListener('click', swapper, false)
+// }
+//
+// var button = document.getElementById('btn');
+//
+// button.addEventListener("click", function () {
+// 	var i = 0;
+// 	for(i = 0; i < 10; i++) {
+// 		button.innerHTML = ++i
+// 	}
+// })
