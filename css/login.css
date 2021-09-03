@@ -6,24 +6,27 @@
 body, html {
     height: 100%;
     width: 100%;
-    background-color: #cbffcd;
+    background-color: rgba(144, 238, 144, 0.37);
     font-family: Arial, Ubuntu, sans-serif;
 }
 
 form {
+    /*box-sizing: border-box;*/
     margin: 1em;
     padding: 1em;
+    /*border: 1.5px dashed black;*/
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
 }
 
 fieldset {
+    border: none;
+    padding: 1em;
+    background-color: white;
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    margin-top: 1em;
-    border: none;
-    background-color: whitesmoke;
+    /*width: 80%;*/
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -31,8 +34,8 @@ fieldset {
 
 .width-80 {
     width: 80%;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
@@ -46,16 +49,12 @@ fieldset {
 }
 
 .form-label {
-    padding-left: 8px;
     font-weight: bold;
     /* The text of a label must be bold */
 }
 
 .btn-block {
-    width: 98.5%;
-    margin-bottom: 5px;
-    margin-left: 5px;
-
+    width: 100%;
     /* This element should use 100% of the width */
 }
 
@@ -63,8 +62,7 @@ fieldset {
     padding: 8px;
     color: white;
     font-weight: bold;
-    border: 1px lightgray;
-    /*width: calc(98.5% - 8px);*/
+    border: 1px solid lightgrey;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
@@ -72,16 +70,13 @@ fieldset {
 }
 
 .form-control {
-    /*padding-left: 1em;*/
     padding-top: 4px;
     padding-bottom: 4px;
-    margin-left: 5px;
     margin-top: .5em;
     margin-bottom: .5em;
-    width: calc(100% - 15px);
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
-
+    width: calc(100% - 5px);
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
