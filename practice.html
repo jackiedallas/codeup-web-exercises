@@ -5,17 +5,141 @@
 	<title>Practice</title>
 	<script src="js/practice.js"></script>
 	<style>
+		* {
+			background-color: rgb(224, 174, 174);
+		}
+		h1 {
+			text-align: center;
+		}
+		
 		.btn {
 			width: 96px;
 			height: 48px;
 			font-size: 24px;
 		}
+		
+		#container {
+			margin: 50px auto;
+			width: 500px;
+			border: 1px solid #000;
+			padding: 10px;
+		}
+		#box1 {
+			background-color: #77AF00; /* greenish */
+			height: 100px;
+			width: 100px;
+			margin: 10px;
+			float: right;
+		}
+		#box2 {
+			background-color: #1969B2; /* blueish */
+			height: 150px;
+			width: 150px;
+			margin: 10px;
+			float: left;
+		}
+		p {
+			clear: left;
+		}
+		
+		#container2 {
+			margin: 50px auto;
+			width: 500px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+		.box2 {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: relative;
+			top: 10px;
+			right: 5px;
+		}
+		
+		#container3 {
+			margin: 50px auto;
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			position: relative;
+		}
+		.box3 {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			
+		}
+		
+		.box4 {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			
+		}
+		
+		.box5 {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 10px;
+			left: 200px;
+			
+		}
+		
+		.dot {
+			height: 100px;
+			width: 100px;
+			background-color: #ab0101;
+			border-radius: 50%;
+			border: 2px solid whitesmoke;
+			position: absolute;
+			bottom: 10px;
+			left: 10px
+			
+		}
+		
 	</style>
 </head>
 <body>
 <h1>Practice Page</h1>
-<button type="button" class="btn" onclick="onClick()" id="buttons">0</button>
+<hr>
+<h1>Floating</h1>
+<div id="container">
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+		eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+		enim ad minim veniam, quis nostrud exercitation ullamco laboris
+		nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+		in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+		nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+		sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</div>
+<hr>
+<h1>Relative Positioning</h1>
+<div id="container2">
+	<div class="box2"></div>
+</div>
+<hr>
+<h1>Absolute Positioning</h1>
+<div id="container3">
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="dot"></div>
+</div>
 
+<button type="button" class="btn" onclick="onClick()" id="buttons">0</button>
 
 <script type="text/javascript">
 	var clicks = 0;
