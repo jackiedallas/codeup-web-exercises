@@ -30,14 +30,17 @@ a {
     width: 100%;
     position: fixed;
     background: var(--light-bg);
+    z-index: 1;
 }
 .nav {
+
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 .nav-link {
-    /*Added padding and display*/
+    /*Added padding, float-left, and display*/
+    float: left;
     padding: 1.5em;
     display: inline-block;
     color: var(--main-link-color);
@@ -48,8 +51,81 @@ a {
     color: var(--link-color);
 }
 .profile {
+    height: 80px;
     background: var(--light-bg);
 }
+
+.profile-items {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.profile-entry {
+      margin: .5em;
+}
+
+
+.profile-image {
+    position: absolute;
+    top: 230px;
+}
+
+.profile-form {
+    position: absolute;
+    bottom: 283px;
+    right: .1px;
+}
+
+.profile-details {
+    /*adjusted relative position to move profile details to the left of screen*/
+    position: relative;
+    top: 0;
+    left: -30px;
+    float: left;
+    width: calc(25% - .5em);
+    margin: 0 .5em 0 .5em;
+}
+
+.timeline {
+    width: calc(50% - .5em);
+    float: left;
+    margin: 0 .5em 0 .5em;
+
+}
+
+.who-to-follow {
+    /*adjusted absolute position to achieve the look of the example*/
+    position: absolute;
+    top: 375px;
+    right: 1px;
+    float: right;
+    width: calc(25% - 2.5em);
+    margin: 0 .5em 0 .5em;
+}
+
+.container {
+    margin: 2em;
+}
+
+.media {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    padding: .5em;
+    overflow: hidden;
+}
+
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -57,10 +133,13 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
+
+
 }
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+
 }
 .img-circle {
     border-radius: 100%;
