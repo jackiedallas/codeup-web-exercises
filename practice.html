@@ -42,13 +42,13 @@
 			clear: left;
 		}
 		
-		#container2 {
+		#relative {
 			margin: 50px auto;
 			width: 500px;
 			height: 200px;
 			border: 1px solid #000;
 		}
-		.box2 {
+		.boxA {
 			background-color: #1969B2;
 			height: 100px;
 			width: 100px;
@@ -57,14 +57,23 @@
 			right: 5px;
 		}
 		
-		#container3 {
+		.boxB {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: relative;
+			bottom: 10px;
+			left: 200px;
+		}
+		
+		#absolute {
 			margin: 50px auto;
 			width: 500px;
 			height: 300px;
 			border: 1px solid #000;
 			position: relative;
 		}
-		.box3 {
+		.boxC {
 			background-color: #1969B2;
 			height: 100px;
 			width: 100px;
@@ -74,7 +83,7 @@
 			
 		}
 		
-		.box4 {
+		.boxD {
 			background-color: #1969B2;
 			height: 100px;
 			width: 100px;
@@ -84,7 +93,7 @@
 			
 		}
 		
-		.box5 {
+		.boxE {
 			background-color: #1969B2;
 			height: 100px;
 			width: 100px;
@@ -92,6 +101,22 @@
 			top: 10px;
 			left: 200px;
 			
+		}
+		
+		#fixed {
+			margin: 50px auto;
+			width: 500px;
+			height: 3000px;
+			border: 1px solid #000;
+		}
+		
+		.boxF {
+			background-color: #1969B2;
+			height: 100px;
+			width: 100px;
+			position: fixed;
+			top: 10px;
+			right: 10px;
 		}
 		
 		.dot {
@@ -127,16 +152,22 @@
 </div>
 <hr>
 <h1>Relative Positioning</h1>
-<div id="container2">
-	<div class="box2"></div>
+<div id="relative">
+	<div class="boxA"></div>
+	<div class="boxB"></div>
 </div>
 <hr>
 <h1>Absolute Positioning</h1>
-<div id="container3">
-	<div class="box3"></div>
-	<div class="box4"></div>
-	<div class="box5"></div>
+<div id="absolute">
+	<div class="boxC"></div>
+	<div class="boxD"></div>
+	<div class="boxE"></div>
 	<div class="dot"></div>
+</div>
+<hr>
+<h1>Fixed Positioning</h1>
+<div id="fixed">
+	<div class="boxF"></div>
 </div>
 
 <button type="button" class="btn" onclick="onClick()" id="buttons">0</button>

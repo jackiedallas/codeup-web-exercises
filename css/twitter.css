@@ -26,6 +26,9 @@ a {
     color: var(--link-color);
 }
 .top-nav {
+    /*changed position to fixed and made width 100%*/
+    width: 100%;
+    position: fixed;
     background: var(--light-bg);
 }
 .nav {
@@ -34,6 +37,9 @@ a {
     margin: 0;
 }
 .nav-link {
+    /*Added padding and display*/
+    padding: 1.5em;
+    display: inline-block;
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
