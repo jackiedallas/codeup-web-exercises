@@ -79,7 +79,7 @@ a {
     /*adjusted relative position to move profile details to the left of screen*/
     position: relative;
     top: 0;
-    left: -30px;
+    left: -35px;
     float: left;
     width: calc(25% - .5em);
     margin: 0 .5em 0 .5em;
@@ -149,4 +149,8 @@ a {
 }
 .text-muted {
     color: var(--main-link-color);
+
+}
+#smiley {
+    font-size: 15px;
 }
