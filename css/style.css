@@ -41,6 +41,29 @@ ul, ol {
 
 }
 
+.pic1 {
+    position: relative;
+    bottom: 10px;
+    left: -5px;
+}
+
+.pic2 {
+    position: relative;
+    bottom: 10px;
+    right: 5px;
+}
+.pic3 {
+    position: relative;
+    left: 1.5px;
+    bottom: 10px;
+}
+
+.pic4 {
+    position: relative;
+    right: 1px;
+    bottom: 10px;
+}
+
 li:hover {
     color: hotpink;
 }
