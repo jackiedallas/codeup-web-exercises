@@ -71,9 +71,8 @@ a {
 }
 
 .profile-form {
-    position: absolute;
-    bottom: 283px;
-    right: .1px;
+   float: right;
+    line-height: 85px;
 }
 
 .profile-details {
