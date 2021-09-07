@@ -3,135 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Practice</title>
+	<link rel="stylesheet" href="css/practice.css">
 	<script src="js/practice.js"></script>
-	<style>
-		* {
-			background-color: rgb(224, 174, 174);
-		}
-		h1 {
-			text-align: center;
-		}
-		
-		.btn {
-			width: 96px;
-			height: 48px;
-			font-size: 24px;
-		}
-		
-		#container {
-			margin: 50px auto;
-			width: 500px;
-			border: 1px solid #000;
-			padding: 10px;
-		}
-		#box1 {
-			background-color: #77AF00; /* greenish */
-			height: 100px;
-			width: 100px;
-			margin: 10px;
-			float: right;
-		}
-		#box2 {
-			background-color: #1969B2; /* blueish */
-			height: 150px;
-			width: 150px;
-			margin: 10px;
-			float: left;
-		}
-		p {
-			clear: left;
-		}
-		
-		#relative {
-			margin: 50px auto;
-			width: 500px;
-			height: 200px;
-			border: 1px solid #000;
-		}
-		.boxA {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: relative;
-			top: 10px;
-			right: 5px;
-		}
-		
-		.boxB {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: relative;
-			bottom: 10px;
-			left: 200px;
-		}
-		
-		#absolute {
-			margin: 50px auto;
-			width: 500px;
-			height: 300px;
-			border: 1px solid #000;
-			position: relative;
-		}
-		.boxC {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: absolute;
-			top: 10px;
-			right: 10px;
-			
-		}
-		
-		.boxD {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			
-		}
-		
-		.boxE {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: absolute;
-			top: 10px;
-			left: 200px;
-			
-		}
-		
-		#fixed {
-			margin: 50px auto;
-			width: 500px;
-			height: 3000px;
-			border: 1px solid #000;
-		}
-		
-		.boxF {
-			background-color: #1969B2;
-			height: 100px;
-			width: 100px;
-			position: fixed;
-			top: 10px;
-			right: 10px;
-		}
-		
-		.dot {
-			height: 100px;
-			width: 100px;
-			background-color: #ab0101;
-			border-radius: 50%;
-			border: 2px solid whitesmoke;
-			position: absolute;
-			bottom: 10px;
-			left: 10px
-			
-		}
-		
-	</style>
 </head>
 <body>
 <h1>Practice Page</h1>
@@ -155,6 +28,7 @@
 <div id="relative">
 	<div class="boxA"></div>
 	<div class="boxB"></div>
+	
 </div>
 <hr>
 <h1>Absolute Positioning</h1>
@@ -163,6 +37,7 @@
 	<div class="boxD"></div>
 	<div class="boxE"></div>
 	<div class="dot"></div>
+	
 </div>
 <hr>
 <h1>Fixed Positioning</h1>
@@ -177,6 +52,27 @@
 	function onClick() {
 		buttons.innerHTML = ++clicks
 	}
+	
+	
+	
+	
 </script>
 </body>
 </html>
+
+
+
+<!--
+.btn {
+    width: 96px;
+    height: 48px;
+    font-size: 24px;
+}
+var clicks = 0;
+function onClick() {
+    buttons.innerHTML = ++clicks
+}
+
+
+
+-->

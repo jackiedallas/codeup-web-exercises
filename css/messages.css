@@ -1,30 +1,42 @@
-.message {
 
-    width: 25%;
-    height: 10px;
-    padding: 10px;
+.message-info ~ .message {
+    font-weight: bold;
+}
+.message {
+    color: rgba(0, 0, 0, 0.65);
+    border: 1px solid lightgrey;
+    font-size: 10px;
+    margin: 8px;
+    /*width: 25%;*/
+    /*height: 10px;*/
+    padding: 8px;
+    border-radius: 5px;
+    /*font-weight: bold;*/
 }
 .message-info {
-
+    color: rgba(26, 26, 63, 0.5);
     background-color: rgba(0, 0, 255, 0.35);
-    border: 5px solid white;
-    border-radius: 10px;
+    /*border: 1px solid lightgrey;*/
+    /*border-radius: 10px;*/
 }
 
 .message-success {
+    color: rgba(38, 82, 38, 0.65);
     background-color: rgba(0, 128, 0, 0.35);
-    border: 5px solid white;
-    border-radius: 10px;
+    /*border: 1px solid lightgrey;*/
+    /*border-radius: 10px;*/
 }
 
 .message-warning {
-    background-color: rgba(255, 255, 0, 0.35);
-    border: 5px solid white;
-    border-radius: 10px;
+    color: rgba(115, 115, 53, 0.65);
+    background-color: rgba(239, 239, 105, 0.35);
+    /*border: 1px solid lightgrey;*/
+    /*border-radius: 10px;*/
 }
 
 .message-error {
+    color: rgba(94, 39, 39, 0.5);
     background-color: rgba(255, 0, 0, 0.35);
-    border: 5px solid white;
-    border-radius: 10px;
+    /*border: 1px solid lightgrey;*/
+    /*border-radius: 10px;*/
 }
