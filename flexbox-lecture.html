@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Examples</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			font-family: monospace;
+			font-weight: bold;
+		}
+		/*justify on the main axis, align on the cross axis*/
+		.flex-container {
+			width: 100%;
+			height: 300px;
+			border: 3px solid goldenrod;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		.flex-item {
+			background: #BFD45D;
+			border: 2px solid #F9EFD6;
+			padding: 1em;
+		}
+		
+		.flex-container2 {
+			display: flex;
+			/*align-items: baseline;*/
+			border: 5px solid goldenrod;
+			height: 100vh;
+			/*padding-top: 4px;*/
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.flex-container2 > div {
+			/*background-color: darksalmon;*/
+			/*border: 1px solid black;*/
+			margin: 0 4px;
+		}
+		.box1 {
+			font-size: 15px;
+		}
+		.box2 {
+			font-size: 30px;
+		}
+		.box3 {
+			font-size: 45px;
+		}
+		.box4 {
+			font-size: 60px;
+		}
+		.box5 {
+			font-size: 75px;
+		}
+	
+	
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item">Item 1</div>
+		<div class="flex-item">Item 2</div>
+		<div class="flex-item">Item 3</div>
+	</div>
+	
+<!--	<div class="flex-container2">-->
+<!--		<div class="box1">first</div>-->
+<!--		<div class="box2">second</div>-->
+<!--		<div class="box3">third</div>-->
+<!--		<div class="box4">fourth</div>-->
+<!--		<div class="box5">fifth</div>-->
+<!--	</div>-->
+
+	
+</body>
+</html>
