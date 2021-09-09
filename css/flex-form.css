@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Verdana;
     margin: 0;
     overflow: hidden;
 }
@@ -23,18 +23,32 @@ body {
 .cover {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    /*justify-content: space-between;*/
     /* TODO: add a flex container to this selector */
 }
 
 .flex-form {
+    display: flex;
+    flex-direction: row;
     z-index: 10;
     position: relative;
     border: 20px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    margin: auto;
+    align-items: center;
+    /*justify-content: space-between;*/
+    background-color: white;
+
+
     /* TODO: Add an automatic margin and a flex container to this selector */
 }
 
 .flex-form > * {
+    display: flex;
+    flex-direction: row;
     border: 0;
     padding: 10px;
     background: white;
@@ -43,16 +57,31 @@ body {
     border-radius: 0;
     outline: 0;
     -webkit-appearance: none;
+    /*flex: 1;*/
+    /*justify-content: center;*/
+    /*flex-wrap: wrap;*/
+}
+input {
+    justify-content: space-between;
 }
 
+
+
+
 .btn-primary {
+    /*display: flex;*/
+    /*flex-direction: row;*/
     background: #b4d455;
     border-top: 1px solid #b4d455;
     border-bottom: 1px solid #b4d455;
     color: white;
+    /*flex: 1;*/
+    /*align-items: stretch;*/
 }
 
 .destination {
+    flex-basis: 15em;
+    /*margin-right: auto;*/
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */

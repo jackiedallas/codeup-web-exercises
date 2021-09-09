@@ -55,6 +55,7 @@ section:nth-of-type(1) {
     background: lightgreen;
     /* enter needed declarations here */
     align-items: center;
+    justify-content: space-between;
 
 }
 

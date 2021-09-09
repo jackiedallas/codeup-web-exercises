@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox in Practice</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+		}
+		nav {
+			background: #333333;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex; /* made unordered list a flex container */
+		}
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-family: Verdana;
+			display: inline-block; /* inline-block to increase clickable area beyond the text */
+			padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+		}
+		nav a:hover {
+			background: black;
+		}
+		nav ul li:nth-child(4) {
+			/*
+				this allows the last flex item to be right justified
+				by filling remaining space to the left of the flex item with margin
+			*/
+			margin-left: auto;
+		}
+		
+		
+		/*#container {*/
+		/*	!*Example Code for vertical/horizontal alignment*!*/
+		/*	!*height: 100vh;*!*/
+		/*	!*justify-content: center;*!*/
+		/*	!*align-items: center;*!*/
+		/*	*/
+		/*	*/
+		/*	*/
+		/*	display: flex;*/
+		/*	background-color: lawngreen;*/
+		/*	border: 1px solid black;*/
+		/*}*/
+		
+		/*.box {*/
+		/*	background-color: rebeccapurple;*/
+		/*	color: antiquewhite;*/
+		/*	padding: 1em;*/
+		/*}*/
+		
+		/*#box1 {*/
+		/*	margin-right: auto;*/
+		/*}*/
+		
+		/*!*#box3 {*!*/
+		/*!*	margin-left: auto;*!*/
+		/*!*}*!*/
+	</style>
+</head>
+<body>
+
+
+<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</nav>
+
+
+<!--<div id="container">-->
+<!--	<div id="box1" class="box">Flex Item</div>-->
+<!--	<div id="box2" class="box">Flex Item</div>-->
+<!--	<div id="box3" class="box">Flex Item</div>-->
+
+<!--</div>-->
+
+</body>
+</html>
