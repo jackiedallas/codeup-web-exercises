@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Source+Code+Pro&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+}
+
+nav {
+    align-items: center;
+    background-color: #EEEEEE;
+    /*display: flex;*/
+    flex-direction: row;
+    /*padding: 1em;*/
+    /*margin: 0;*/
+    display: flex;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.5px;
+    /*width: 32px;*/
+    /*height: 32px;*/
+    /*align-items: center;*/
+    /*position: absolute;*/
+    /*top: 1px;*/
+}
+#nav-items-left {
+    /*justify-content: center;*/
+}
+
+#nav-items-right {
+
+    margin-left: auto;
+    /*flex-grow: 1;*/
+    /*align-content: flex-start;*/
+    /*flex-wrap: wrap;*/
+}
+
+nav a {
+    /*border-right: 1px solid #77ACF1;*/
+    color: #393E46;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: none;
+    display: inline-block;
+    padding: .6em;
+}
+
+.right-links {
+    border: none;
+}
+
+nav a:hover {
+    background: lightgrey;
+
+}
+
