@@ -6,11 +6,13 @@
 
 body {
     margin: 0;
+    background-color: #AAD8D3;
 
 }
 
 nav {
     align-items: center;
+    justify-content: space-between;
     background-color: #EEEEEE;
     /*display: flex;*/
     flex-direction: row;
@@ -29,9 +31,12 @@ ul {
 }
 
 #logo {
+    display: flex;
+    justify-content: center;
+
     margin-right: auto;
     margin-left: auto;
-    padding: 1.5px;
+    /*padding: 1.5px;*/
     /*width: 32px;*/
     /*height: 32px;*/
     /*align-items: center;*/
@@ -44,7 +49,7 @@ ul {
 
 #nav-items-right {
 
-    margin-left: auto;
+    /*margin-left: auto;*/
     /*flex-grow: 1;*/
     /*align-content: flex-start;*/
     /*flex-wrap: wrap;*/
@@ -68,3 +73,17 @@ nav a:hover {
 
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    height: 200px;
+    width: 100%;
+    margin: auto 0;
+    flex: 1 0 auto;
+    flex-shrink: 0;
+    justify-content: flex-end;
+}
+.content {
+
+}
