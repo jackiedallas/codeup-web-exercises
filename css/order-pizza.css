@@ -19,3 +19,40 @@
 	/*justify-content: left;*/
 
 }
+
+.login {
+	margin-left: auto;
+}
+
+.login-button {
+	color: black;
+	font-weight: lighter;
+}
+
+.jumbotron {
+
+	background-image: url("https://www.parkwaypizzasubs.com/wp-content/uploads/2020/10/banner_image-1024x343.jpg");
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	height: 343px;
+}
+
+.heading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 295px;
+
+
+}
+
+.pizza-heading {
+	background-color: rgba(255, 255, 255, 0.65);
+	width: 100%;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.pizza-world {
+	font-family: 'Caveat', cursive;
+}
