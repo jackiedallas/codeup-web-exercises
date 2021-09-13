@@ -30,7 +30,7 @@
 }
 
 .jumbotron {
-
+	/* Couldn't get codeup image to load on page */
 	background-image: url("https://www.parkwaypizzasubs.com/wp-content/uploads/2020/10/banner_image-1024x343.jpg");
 	/*background-repeat: no-repeat;*/
 	/*background-size: cover;*/
@@ -51,6 +51,7 @@
 	width: 100%;
 	text-align: center;
 	font-weight: lighter;
+	/*font-size: medium;*/
 }
 
 .pizza-world {
