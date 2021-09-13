@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Ubuntu&display=swap');
 ul {
     list-style: none;
     padding-left: 0;
@@ -10,7 +11,9 @@ ul {
 }
 
 body {
-    margin: 1em;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 960px;
 }
 
 /*li {*/
@@ -36,7 +39,7 @@ body {
 
     }
 
-    .alert-info > a {
+    .alert-info a {
         text-decoration: none;
         color: black;
         padding: .75em;
@@ -45,6 +48,7 @@ body {
     h1 {
         font-size: 45px;
         margin: 10px auto;
+        /*text-align: center;*/
         /*margin-left: auto;*/
         /*margin-right: auto;*/
     }
@@ -75,6 +79,12 @@ body {
         padding: 1em;
     }
 
+    footer {
+        margin-top: 6rem;
+        display: flex;
+
+    }
+
 }
 
 @media screen and (min-width:934px) {
@@ -87,24 +97,33 @@ body {
     }
 
     h1 {
+        /*margin-bottom: 0;*/
         font-size: 45px;
         display: inline-block;
         /*justify-content: flex-start;*/
     }
 
     nav {
-        display: inline-block;
+        float: right;
+        padding-top: 40px;
+
+        /*display: inline-block;*/
+        /*justify-content: space-between;*/
         /*flex-direction: row;*/
         /*justify-content: flex-end;*/
 
 
     }
     .nav-links {
+
         display: flex;
+        align-items: center;
+        justify-content: center;
+        /*margin-left: 670px;*/
         /*margin-left: 10px;*/
-        width: 710px;
-        justify-content: flex-end;
-        /*flex-direction: row;*/
+        /*width: 710px;*/
+        /*justify-self: flex-end;*/
+        flex-direction: row;
         /*justify-content: flex-end;*/
     }
     li {
@@ -112,7 +131,7 @@ body {
     }
 
     img {
-        width: 900px;
+        width: 100%;
         height: 400px;
         margin-bottom: 1em;
         /*margin-top: 1em;*/

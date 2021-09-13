@@ -98,3 +98,8 @@ li {
 	display: flex;
 	justify-content: flex-end;
 }
+
+.badge {
+	margin-right: 3px;
+	align-items: center;
+}
