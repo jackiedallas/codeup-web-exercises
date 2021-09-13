@@ -1,0 +1,21 @@
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
+.navbar-brand {
+	font-weight: bold;
+	font-family: 'Caveat', cursive;
+	font-size: 2rem;
+	/*justify-content: left;*/
+}
+
+.btn-group {
+	/*justify-content: left;*/
+}
+
+.form-inline {
+	/*justify-content: left;*/
+
+}
