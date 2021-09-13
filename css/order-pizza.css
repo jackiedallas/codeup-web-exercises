@@ -71,9 +71,30 @@ li {
 	background-color: dodgerblue;
 }
 
-h5 {
+.card-title {
 	font-weight: normal;
 	background-color: rgba(0,0,0,.03);
 	padding: .5rem;
 	border: 1px solid lightgrey;
+	margin-bottom: 0;
+}
+
+.card-text {
+	padding: .5rem;
+	border-width: 0 1px 1px 1px;
+	border-color: lightgrey;
+	border-style: solid;
+	margin-bottom: 0;
+}
+
+.list-group {
+	padding: .5rem;
+	border-width: 0 1px 1px 1px;
+	border-color: lightgrey;
+	border-style: solid;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: flex-end;
 }
