@@ -41,16 +41,16 @@
 				<a class="nav-link active" id="nav-sizeCrust" data-toggle="tab" href="#nav-size-crust" role="tab" aria-controls="nav-size-crust" aria-selected="true">
 					<span class="badge badge-pill badge-secondary">1</span>Size and Crust
 				</a>
-				<a class="nav-link active" id="nav-cheeseSauce" data-toggle="tab" href="#nav-cheese-sauce" role="tab" aria-controls="nav-cheese-sauce" aria-selected="false">
+				<a class="nav-link" id="nav-cheeseSauce" data-toggle="tab" href="#nav-cheese-sauce" role="tab" aria-controls="nav-cheese-sauce" aria-selected="false">
 					<span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce
 				</a>
-				<a class="nav-link active" id="nav-topping" data-toggle="tab" href="#nav-toppings" role="tab" aria-controls="nav-toppings" aria-selected="false">
+				<a class="nav-link" id="nav-topping" data-toggle="tab" href="#nav-toppings" role="tab" aria-controls="nav-toppings" aria-selected="false">
 					<span class="badge badge-pill badge-secondary">3</span>Toppings
 				</a>
 			</div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="nav-size-crust" role="tabpanel" aria-labelledby="nav-size-crust">
+			<div class="tab-pane fade show active" id="nav-size-crust" role="tabpanel" aria-labelledby="nav-sizeCrust-tab">
 				<div class="card">
 					<!--Card for Size and Crust-->
 					<div class="card-header">
@@ -84,6 +84,46 @@
 							<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
 						</svg></a>
 					</div>
+					
+				</div>
+			</div>
+			<div class="tab-pane fade" id="nav-cheese-sauce" role="tabpanel" aria-labelledby="nav-cheeseSauce-tab">
+				<div class="card">
+					<!--Card for Cheese and Sauce-->
+					<!--trying to figure out how to get my toggle to work -->
+					<div class="card-header">
+						Choose Cheese and Sauce
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Cheese</h5>
+						<ul class="list-group list-group-flush">
+							<li>
+								<input class="card-button" type="radio" name="pizza-size" value="small">Small (10")
+							</li>
+							<li>
+								<input class="card-button" type="radio" name="pizza-size" value="small">Medium (12")
+							</li>
+						</ul>
+						<br>
+						<h5 class="card-title">Sauce</h5>
+						<ul class="list-group list-group-flush">
+							<li>
+								<input class="card-button" type="radio" name="pizza-size" value="small">Medium (12")
+							</li>
+							<li>
+								<input class="card-button" type="radio" name="pizza-size" value="small">Large (14")
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+						</svg> Previous Step</a>
+						<a href="#" class="btn btn-primary">Next Step <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+						</svg></a>
+					</div>
+				
 				</div>
 			</div>
 		</div>
