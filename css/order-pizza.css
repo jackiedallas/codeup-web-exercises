@@ -57,3 +57,23 @@
 .pizza-world {
 	font-family: 'Caveat', cursive;
 }
+
+li {
+	list-style-type: none;
+}
+
+.card-button {
+	margin-right: 3px;
+}
+
+.card-header {
+	color: white;
+	background-color: dodgerblue;
+}
+
+h5 {
+	font-weight: normal;
+	background-color: rgba(0,0,0,.03);
+	padding: .5rem;
+	border: 1px solid lightgrey;
+}
