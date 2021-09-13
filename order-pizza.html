@@ -5,6 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Pizza World</title>
+	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<!-- Your custom css styles go here -->
 	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -22,6 +23,7 @@
 					<input type="radio" name="menu" id="option2">Menu
 				</label>
 			</div>
+<!--End of Top Nav Bar-->
 			<div class="form-inline">
 				<input type="search" class="form-control rounded" placeholder="Zipcode" aria-label="Search" aria-describedby="search-addon">
 				<button type="button" class="btn btn-outline-dark">Search stores near you!</button>
@@ -36,6 +38,7 @@
 				<h1 class="pizza-heading">Welcome to <span class="pizza-world">Pizza World!</span></h1>
 			</div>
 		</div>
+<!--End of JumboTron -->
 		<nav>
 			<div class="nav nav-tabs" id="nav-tab" role="tablist">
 				<a class="nav-link active" id="nav-sizeCrust" data-toggle="tab" href="#nav-size-crust" role="tab" aria-controls="nav-size-crust" aria-selected="true">
@@ -49,6 +52,7 @@
 				</a>
 			</div>
 		</nav>
+<!--	End of nav Tabs for options cards	-->
 		<div class="tab-content" id="nav-tabContent">
 			<div class="tab-pane fade show active" id="nav-size-crust" role="tabpanel" aria-labelledby="nav-sizeCrust-tab">
 				<div class="card">
@@ -84,46 +88,120 @@
 							<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
 						</svg></a>
 					</div>
-					
 				</div>
 			</div>
+	<!--		End of size and crust tab content		-->
 			<div class="tab-pane fade" id="nav-cheese-sauce" role="tabpanel" aria-labelledby="nav-cheeseSauce-tab">
 				<div class="card">
 					<!--Card for Cheese and Sauce-->
-					<!--trying to figure out how to get my toggle to work -->
+					<!--Figured out how to get the toggle to work, had to add jquery cdn link to head of html doc -->
 					<div class="card-header">
 						Choose Cheese and Sauce
 					</div>
 					<div class="card-body">
 						<h5 class="card-title">Cheese</h5>
-						<ul class="list-group list-group-flush">
-							<li>
-								<input class="card-button" type="radio" name="pizza-size" value="small">Small (10")
-							</li>
-							<li>
-								<input class="card-button" type="radio" name="pizza-size" value="small">Medium (12")
-							</li>
-						</ul>
-						<br>
-						<h5 class="card-title">Sauce</h5>
-						<ul class="list-group list-group-flush">
-							<li>
-								<input class="card-button" type="radio" name="pizza-size" value="small">Medium (12")
-							</li>
-							<li>
-								<input class="card-button" type="radio" name="pizza-size" value="small">Large (14")
-							</li>
-						</ul>
+<!--						<p class="card-text">How Much?</p>-->
+						<div class="form-group">
+							<label for="exampleFormControlSelect1">How Much?</label>
+							<select class="form-control" id="exampleFormControlSelect1">
+								<option>Normal</option>
+								<option>Light</option>
+								<option>Extra</option>
+								<option>Double</option>
+							</select>
+						</div>
+						<h5 class="card-title mt-2">Sauce</h5>
+						<div class="form-group">
+							<label for="exampleFormControlSelect2">What Type?</label>
+							<select class="form-control" id="exampleFormControlSelect2">
+								<option>Tomato Sauce</option>
+								<option>Marinara Sauce</option>
+								<option>BBQ Sauce</option>
+								<option>Alfredo Sauce</option>
+							</select>
+							<label class="mt-3" for="exampleFormControlSelect3">How Much?</label>
+							<select class="form-control" id="exampleFormControlSelect3">
+								<option>Normal</option>
+								<option>Light</option>
+								<option>Extra</option>
+							</select>
+						</div>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-						</svg> Previous Step</a>
-						<a href="#" class="btn btn-primary">Next Step <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-						</svg></a>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+							</svg>Previous</button>
+							<button type="button" class="btn btn-primary">Next<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+							</svg></button>
+						</div>
 					</div>
-				
+<!--		End of cheese and sauce tab content		-->
+				</div>
+			</div>
+			<div class="tab-pane fade" id="nav-toppings" role="tabpanel" aria-labelledby="nav-toppings-tab">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Choose Meats</h5>
+						<div class="form-group form-check meat-form">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="beef">
+								<label class="form-check-label" for="beef">Beef</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="ham">
+								<label class="form-check-label" for="ham">Ham</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="philly-steak">
+								<label class="form-check-label" for="philly-steak">Philly Steak</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="bacon">
+								<label class="form-check-label" for="bacon">Bacon</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Choose Non-Meats</h5>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="green-peppers">
+								<label class="form-check-label" for="green-peppers">Green Peppers</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="mushrooms">
+								<label class="form-check-label" for="mushrooms">Mushrooms</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="onions">
+								<label class="form-check-label" for="onions">Onions</label>
+							</div>
+						</div>
+						<div class="form-group form-check">
+							<div class="meat-options">
+								<input type="checkbox" class="form-check-input" id="jalepenos">
+								<label class="form-check-label" for="jalepenos">Jalepeño Peppers</label>
+							</div>
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-primary">Checkout <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check mb-1" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+								<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+							</svg></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -131,8 +209,10 @@
 	
 	<!-- Main page content -->
 	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	<!-- Your custom JS goes here -->
-	<script src="js/order-pizza.js"></script>
+<!--	<script src="js/order-pizza.js"></script>-->
 </body>
 </html>

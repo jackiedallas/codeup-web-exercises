@@ -28,13 +28,14 @@
 	color: black;
 	font-weight: lighter;
 }
-
+/*"https://www.parkwaypizzasubs.com/wp-content/uploads/2020/10/banner_image-1024x343.jpg"*/
 .jumbotron {
 	/* Couldn't get codeup image to load on page */
-	background-image: url("https://www.parkwaypizzasubs.com/wp-content/uploads/2020/10/banner_image-1024x343.jpg");
+	/* use .. to go one file backwards in your project*/
+	background-image: url("../img/pizza.png");
 	/*background-repeat: no-repeat;*/
 	/*background-size: cover;*/
-	height: 343px;
+	height: 345px;
 }
 
 .heading-container {
@@ -102,4 +103,22 @@ li {
 .badge {
 	margin-right: 3px;
 	align-items: center;
+}
+
+.form-group {
+	padding: .5rem;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: lightgrey;
+
+
+}
+
+
+.meat-options {
+	margin-left: 2rem;
+}
+
+.form-check {
+	margin-bottom: 0;
 }
