@@ -224,3 +224,21 @@ function getGrade(score) {
 }
 
 console.log(getGrade(17));
+
+var hasTacos = ['blueberry muffin', 'banana', 'yogurt', 'cereal', 'brisket and egg taco'];
+var noTacos = ['parfait', 'omlette de frumage', 'protein shake', 'fasting'];
+
+function tacoTuesday(input) {
+	var newArr = input.join(" ").split(" ")
+	console.log(newArr)
+	for (var i = 0; i < newArr.length; i++) {
+		if (newArr.includes('taco')) {
+			return true;
+		} else if (!newArr.includes('taco')) {
+			return false;
+		}
+	}
+}
+
+console.log(tacoTuesday(hasTacos));
+console.log(tacoTuesday(noTacos));
