@@ -1,0 +1,14 @@
+/* screen sizes sm */
+@media screen and (min-width:320px) and (max-width: 767px) {
+	.nav {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+@media screen and (min-width:320px) and (max-width: 767px) {
+	selector {
+		property: value;
+	}
+}
