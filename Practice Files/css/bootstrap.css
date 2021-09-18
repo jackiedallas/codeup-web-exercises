@@ -58,6 +58,10 @@ ul {
 	border: none;
 }
 
+.jumbotron {
+	font-family: 'Anton', sans-serif;
+}
+
 
 /*MEDIA QUERIES*/
 
