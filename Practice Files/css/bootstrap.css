@@ -32,9 +32,6 @@ ul {
 	border-radius: 50%;
 	text-align: center;
 }
-
-
-
 .red-circle {
 	background-color: #e6563b;
 }
@@ -60,6 +57,10 @@ ul {
 
 .jumbotron {
 	font-family: 'Anton', sans-serif;
+}
+.last-col-text {
+	font-family: 'Anton', sans-serif;
+
 }
 
 
@@ -225,5 +226,18 @@ ul {
 
 /*DESKTOP VIEW START*/
 @media screen and (min-width:992px) {
+	/*.desktop-selected-container {*/
+	/*	flex-direction: row;*/
+	/*}*/
+	.column-1 {
+		margin-right: 4em;
+	}
+	.column-2 {
+		margin: 0 auto;
+	}
+	.column-3 {
+		margin-left: 4em;
+		padding: 20px;
 
+	}
 }
