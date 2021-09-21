@@ -24,41 +24,72 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="header-button">New Main Header</button>
+<button id="subHeader-button">New Sub Header Color</button>
+<button id="odd-items-button">Odd Grey List Items</button>
+<button id="item-1-button">Item 1 Button</button>
+<button id="paragraph-button">New Paragraph</button>
 
 <script>
-    
-        "use strict";
+		"use strict";
+		
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
-
+		
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-		mainHeader.innerHTML = 'JavaScript is Cool';
+		// mainHeader.innerHTML = 'JavaScript is Cool';
+		// Header button
+		var headerButton = function (event) {
+			mainHeader.innerHTML = 'JavaScript is Cool';
+		}
+		document.getElementById('header-button').addEventListener('click', headerButton);
 		
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 		
         // TODO: Set the text color of subHeader to blue
-		subHeader.style.color = 'blue';
+		// subHeader.style.color = 'blue';
+		var subHeaderStyle = function (event) {
+			subHeader.style.color = 'blue';
+		}
+		document.getElementById('subHeader-button').addEventListener('click', subHeaderStyle)
 		
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
-	    console.log(listItems);
+	    // console.log(listItems);
 		
         // TODO: Set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i++) {
-	        if (i % 2 !== 0) {
-				listItems[i].style.color = 'grey';
-	        }
-        }
-        // TODO: Set text color of li with dbid = 1 to blue
-		listItems[0].style.color = 'blue';
+        // for (var i = 0; i < listItems.length; i++) {
+	    //     if (i % 2 !== 0) {
+		// 		listItems[i].style.color = 'grey';
+	    //     }
+        // }
+		var oddListItems = function (event) {
+			for (let i = 0; i < listItems.length; i++) {
+				if(i % 2 !== 0) {
+					listItems[i].style.color = 'grey';
+				}
+			}
+		}
+		document.getElementById('odd-items-button').addEventListener('click', oddListItems);
 		
+        // TODO: Set text color of li with dbid = 1 to blue
+		// listItems[0].style.color = 'blue';
+		var itemOne = function (event) {
+			listItems[0].style.color = 'red';
+		}
+		document.getElementById('item-1-button').addEventListener('click', itemOne);
 		
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 		
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = '<strong>Mission Accomplished!</strong>';
+        // subParagraphs[0].innerHTML = '<strong>Mission Accomplished!</strong>';
+		var missionAccomplished = function (event) {
+			subParagraphs[0].innerHTML = '<strong>MISSION ACCOMPLISHED!</strong>';
+		}
+		document.getElementById('paragraph-button').addEventListener('click', missionAccomplished);
+		
 </script>
 </body>
 </html>
