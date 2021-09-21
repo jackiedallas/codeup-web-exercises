@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Warm-Up JS</title>
+</head>
+<body>
+
+<script>
+	function logEvens(num) {
+		var evens = [];
+		for (let i = 1; i <= num; i++) {
+			if(i % 2 === 0) {
+				evens.push(i);
+				console.log(i);
+			}
+		}
+		console.log(evens);
+		var stringEvens = evens.join(',');
+		console.log(stringEvens);
+	}
+	logEvens(10);
+</script>
+</body>
+</html>
