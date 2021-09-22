@@ -1,14 +1,6 @@
-$('#nav-sizeCrust a').on('click', function (e) {
-	e.preventDefault()
-	$(this).tab('show')
+var cheeseStep = document.getElementById('nav-cheese-sauce');
+
+document.getElementById('next-step').addEventListener('click', function (event) {
+	location.;
 })
 
-$('#nav-cheeseSauce a').on('click', function (e) {
-	e.preventDefault()
-	$(this).tab('show')
-})
-
-$('#nav-topping a').on('click', function (e) {
-	e.preventDefault()
-	$(this).tab('show')
-})
