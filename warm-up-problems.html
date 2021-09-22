@@ -20,6 +20,18 @@
 		console.log(stringEvens);
 	}
 	logEvens(10);
+	
+	function logNum(number) {
+		for (let i = 1; i <= number ; i++) {
+			if (i % 2 !== 0) {
+				console.log(i + " is an odd number.")
+			} else if (i % 2 === 0) {
+				console.log(i + " is an even number.")
+			}
+		}
+	}
+	logNum(10);
+	
 </script>
 </body>
 </html>
