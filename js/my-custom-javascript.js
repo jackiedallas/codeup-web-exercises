@@ -65,3 +65,14 @@ $('#example').hover(
 	}
 );
 
+// alert(counter)
+$(document).ready(function () {
+	var count = 0;
+	$('#button2').css('font-size', '50px').css('width', '100px').css('height', '100px').click(function () {
+		++count;
+		$('#counter').html(count)
+	})
+
+	
+});
+
