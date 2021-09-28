@@ -31,7 +31,37 @@
 // $('.codeup').css('border', '1px solid red')
 
 // Element Selector Exercises
-$('li').css('font-size', '20px');
-$('h1, p, li').css('background-color', 'yellow');
+$('ul').css('padding-left', '0')
+$('li').css('font-size', '20px').css('list-style', 'none');
+// $('h1, p, li').css('background-color', 'yellow');
 var test2 = $('h1').html();
-alert(test2);
+// alert(test2);
+$('*').css('text-align', 'center').css('margin', '1rem');
+$('#header1').css('font-family', 'monospace').css('background-color', 'gold')
+
+$('#button1').click(function () {
+	alert(test2);
+});
+
+$('.header-2-doubleClick').dblclick(function () {
+	alert("You double clicked header 2")
+});
+
+$('#exercise-header').hover(
+	function () {
+		$(this).css('background-color', 'yellow')
+	},
+	function f() {
+		$(this).css('background-color', 'white')
+	}
+);
+
+$('#example').hover(
+	function () {
+		$(this).css('transform', 'rotateY(180deg)')
+	},
+	function () {
+		$(this).css('transform', 'rotateY(360deg)')
+	}
+);
+
