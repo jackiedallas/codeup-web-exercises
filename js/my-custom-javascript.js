@@ -19,3 +19,4 @@ $('.important, p').css('background-color', '#ff0');
 
 // USING THE ALL SELECTOR
 $('*').css('border', '1px solid #f00');
+
