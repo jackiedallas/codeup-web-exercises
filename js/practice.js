@@ -242,3 +242,25 @@ function tacoTuesday(input) {
 
 console.log(tacoTuesday(hasTacos));
 console.log(tacoTuesday(noTacos));
+
+
+
+
+//Live Search Function
+function liveSearchCoffees() {
+	// making sure all inputs are lowercase
+	var searchCoffees = searchArea.value.toLowerCase();
+	console.log(searchCoffees)
+	var searchedCoffees = [];
+	// console.log(searchedCoffees);
+	coffees.forEach((coffee) => {
+		if (coffee.name.toLowerCase().includes(searchCoffees)) {
+			searchedCoffees.push(coffee);
+		}
+	})
+	// console.log(searchedCoffees);
+	tbody.innerHTML = renderCoffees(searchedCoffees);
+}
+
+var searchArea = document.querySelector('#search-area');
+searchArea.addEventListener('keyup', liveSearchCoffees);
