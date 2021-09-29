@@ -39,8 +39,9 @@ var test2 = $('h1').html();
 $('*').css('text-align', 'center').css('margin', '1rem');
 $('#header1').css('font-family', 'monospace').css('background-color', 'gold')
 
+
 $('#button1').click(function () {
-	alert(test2);
+	$('*').toggle("explode");
 });
 
 $('.header-2-doubleClick').dblclick(function () {
