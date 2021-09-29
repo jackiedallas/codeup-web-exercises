@@ -2,13 +2,51 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Konami Page</title>
+	<title>Konami Code</title>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<style>
+		body {
+			background-color: black;
+			margin: 1em;
+		}
+		h1, #press-start {
+			font-family: 'VT323', monospace;
+			color: #04c404;
+		}
+		#press-start {
+			background-color: black;
+			border: none;
+		}
+		.makeDisappear {
+			height: 100vh;
+			
+		}
+		/*Flashlight*/
+		* {
+			cursor: none;
+			cursorX: 50vw;
+			cursorY: 50vh;
+		}
+		
+		
+	</style>
 </head>
 <body>
+	<div class="makeDisappear container d-flex flex-column justify-content-center">
+		<div class="d-flex justify-content-center">
+			<h1 class="animate__animated animate__flash animate__infinite animate__slow" id="flashy-header">KONAMI CODE</h1>
+		</div>
+		<div class="d-flex justify-content-center">
+			<button id="press-start" type="submit">PRESS START BUTTON</button>
+		</div>
+	</div>
 	
-
-
 	
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="js/konami.js"></script>
 </body>
