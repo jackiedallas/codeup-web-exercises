@@ -76,6 +76,18 @@ button1.addEventListener('click', function () {
 	}
 })
 
+// $('body').keydown(function (event) {
+// 	console.log(event.key)
+// })
+
+// $('body').keypress(function (event) {
+// 	console.log(event.key)
+// })
+
+$('body').keyup(function (event) {
+	console.log(event.key)
+})
+
 // demonstrate the BODY as a thing to manipulate - the BODY can be targeted as any other thing:
 
 // Get the body element (notice we need to use index 0 of the array!)
