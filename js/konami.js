@@ -1,13 +1,44 @@
 "use strict"
-$('#snake1, #snake2, #snake3').css('display', 'none');
-function konamiGame() {
+
+$(document).ready (function () {
+	$('#snake1, #snake2, #snake3').hide();
 	// Initialize the game
-	$('#press-start').click(function () {
-		$('.makeDisappear').css('color', 'blue');
+	var pressStart = document.getElementById('start');
+	pressStart.addEventListener('click', function () {
+		$('#flashy-header, #start').hide();
+		$('.showPicture').show();
+		modalDialog();
 	})
-	$('.showPicture').css('display', 'contents');
+	// $('#press-start').click(function () {
+	//
+	// })
+	
+});
+
+function modalDialog() {
+	$('#snake1').hover(function () {
+		$(this).show('#modal')
+	},
+	function () {
+		$('#modal').hide()
+	})
+	
+	$('#snake2').hover(function () {
+			$('#modal').show()
+		},
+		function () {
+			$('#modal').hide()
+		})
+	
+	$('#snake3').hover(function () {
+			$('#modal').show()
+		},
+		function () {
+			$('#modal').hide()
+		})
+	
+
 }
-konamiGame();
 
 // Make the mouse pointer a flashlight
 // || mouseLocation.touches[0].clientY
@@ -51,9 +82,9 @@ $(document).keydown(function(event){
 	userKeys.push(event.key);
 	if (userKeys.join('') === konamiCode) {
 		alert("You have gained 30 lives!");
-		$('h1').click(function () {
-			window.location.reload(true);
-		});
+		// $('h1').click(function () {
+		// 	window.location.reload(true);
+		// });
 	}
 	
 });
