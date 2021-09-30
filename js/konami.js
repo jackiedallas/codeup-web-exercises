@@ -12,8 +12,8 @@ function flashlight(mouseLocation) {
 	var y = mouseLocation.clientY;
 	// console.log(x + y)
 	// Style cursors in CSS
-	document.documentElement.style.setProperty('cursorX', x, 'px');
-	document.documentElement.style.setProperty('cursorY', y, 'px')
+	document.documentElement.style.setProperty('--cursorX', x + 'px');
+	document.documentElement.style.setProperty('--cursorY', y + 'px');
 }
 // Add event listener for the mouse pointer
 $(document).mousemove(flashlight);

@@ -1,0 +1,44 @@
+
+body {
+	background-color: whitesmoke;
+	/*z-index: 2;*/
+
+}
+h1, #press-start {
+	font-family: 'VT323', monospace;
+	color: #04c404;
+}
+#press-start {
+	background-color: whitesmoke;
+	border: none;
+}
+
+
+.makeDisappear {
+	height: 100vh;
+	width: 100%;
+	/*z-index: 1;*/
+	/*background-color: black;*/
+
+}
+/*Flashlight*/
+ :root {
+	cursor: none;
+	--cursorX: 50vw;
+	--cursorY: 50vh;
+}
+:root:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	pointer-events: none;
+	background: radial-gradient(
+	circle 10vmax at var(--cursorX)
+	var(--cursorY),
+	rgba(0, 0, 0, 0) 0%,
+	rgba(0,0,0,.5) 80%,
+	rgba(0,0,0,.95) 100%
+	)
+}
