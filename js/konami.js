@@ -1,7 +1,13 @@
 "use strict"
-$('#press-start').click(function () {
-	$('body').html('');
-})
+$('#snake1, #snake2, #snake3').css('display', 'none');
+function konamiGame() {
+	// Initialize the game
+	$('#press-start').click(function () {
+		$('.makeDisappear').css('color', 'blue');
+	})
+	$('.showPicture').css('display', 'contents');
+}
+konamiGame();
 
 // Make the mouse pointer a flashlight
 // || mouseLocation.touches[0].clientY
@@ -18,6 +24,8 @@ function flashlight(mouseLocation) {
 // Add event listener for the mouse pointer
 $(document).mousemove(flashlight);
 // $(document).touches(flashlight);
+
+
 
 
 
@@ -49,6 +57,7 @@ $(document).keydown(function(event){
 	}
 	
 });
+
 
 
 

@@ -2,8 +2,12 @@
 body {
 	background-color: whitesmoke;
 	/*z-index: 2;*/
+	height: 100vh;
+	width: 100vh;
 
 }
+
+
 h1, #press-start {
 	font-family: 'VT323', monospace;
 	color: #04c404;
@@ -38,7 +42,7 @@ h1, #press-start {
 	circle 10vmax at var(--cursorX)
 	var(--cursorY),
 	rgba(0, 0, 0, 0) 0%,
-	rgba(0,0,0,.5) 80%,
-	rgba(0,0,0,.95) 100%
+	rgba(0, 0, 0, 0.5) 80%,
+	rgb(0, 0, 0) 100%
 	)
 }
