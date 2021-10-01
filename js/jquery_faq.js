@@ -68,9 +68,18 @@ $(document).ready(function () {
 	
 	$('#s-btn1').click(function (e) {
 		e.preventDefault();
-		// $('#picturesList li:eq(1)').before($('#picturesList li:eq(0)'));
 		$('#picturesList li:eq(1)').insertBefore('#picturesList li:eq(0)');
-		
+	})
+	
+	$('#s-btn3').click(function (e) {
+		e.preventDefault();
+		$('#picturesList li:eq(2)').insertBefore('#picturesList li:eq(1)');
+	})
+	
+	$('#s-btn2').click(function (e) {
+		e.preventDefault();
+		$('#picturesList li:eq(1)').insertAfter('#picturesList li:eq(2)');
+		$('#picturesList li:eq(0)').insertAfter('#picturesList li:eq(1)');
 	})
 	
 })
