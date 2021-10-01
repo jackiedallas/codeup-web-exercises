@@ -86,5 +86,4 @@ $(document).ready(function () {
 
 
 
-
-
+// use $(this).  to refer to elements children and parents instead of giving elements id's
