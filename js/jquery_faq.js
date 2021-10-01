@@ -69,7 +69,7 @@ $(document).ready(function () {
 	$('#s-btn1').click(function (e) {
 		e.preventDefault();
 		// $('#picturesList li:eq(1)').before($('#picturesList li:eq(0)'));
-		
+		$('#picturesList li:eq(1)').insertBefore('#picturesList li:eq(0)');
 		
 	})
 	
