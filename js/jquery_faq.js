@@ -3,6 +3,9 @@
 $(document).ready(function () {
 	$('body').css('color', 'limegreen').css('background-color', 'black')
 	$('dd').addClass('invisible');
+	$('li:last-child').addClass('highlight')
+	// $('.highlight').css('background-color', 'yellow')
+	
 	// $('ul').addClass('list-facts')
 	// $('.invisible').css('visibility', 'hidden');
 	var highlightFacts = document.getElementById('highlight');
@@ -17,9 +20,19 @@ $(document).ready(function () {
 	highlightFacts.addEventListener('click', function (e){
 		e.preventDefault();
 		$('li:last-child').css('background-color', 'yellow');
-		// $('li').children().last().css('background-color', 'yellow');
+		// $('.highlight').toggleClass('highlight');
 	})
 	
+	
+	$('#earth-header').click(function () {
+		$('#earth-header').next().css('font-weight', 'bold')
+	})
+	$('#mars-header').click(function () {
+		$('#mars-header').next().css('font-weight', 'bold')
+	})
+	$('#saturn-header').click(function () {
+		$('#saturn-header').next().css('font-weight', 'bold')
+	})
 	
 })
 
