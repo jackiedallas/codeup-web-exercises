@@ -2,13 +2,28 @@
 <html lang="en">
 <head>
     <title>Online Store</title>
+	<style>
+		#products {
+			/*padding: 5px;*/
+			text-align: center;
+			border: 2px solid black;
+			
+		}
+		td, th {
+			border: 1.5px solid black;
+			padding: 7px;
+		}
+	</style>
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+
 
 <table id="products">
     <thead>
+        <tr>
+	        <th colspan="4"><h1>My Tool Store</h1></th>
+        </tr>
         <tr>
             <th>Title</th>
             <th>Quantity</th>
@@ -25,11 +40,23 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-	$.get('/data/inventory.json').done(function (data) {
+	$.get('/data/inventory.json').done(function (data)
+	{
+		// Make sure data is being pulled
 		console.log(data)
+		// console.log(data[0].categories)
+		var tableData = '';
+		for (let i = 0; i < data.length; i++) {
+			tableData += '<tr>' +
+					'<td>' + data[i].title + '</td>' +
+					'<td>' + data[i].quantity + '</td>' +
+					'<td>' + '$' + data[i].price + '</td>' +
+					'<td>' + data[i].categories + '</td>' +
+					'</tr>'
+		}
+		$('#insertProducts').html(tableData)
 	});
-	
-		
+	$('body').css('font-family', 'helvetica')
 	
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
