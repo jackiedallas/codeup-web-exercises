@@ -14,6 +14,7 @@
 			font-family: 'Maven Pro', sans-serif;
 			color: #753422;
 			font-weight: 300;
+			/*background-color: #D79771;*/
 		}
 		
 		li {
@@ -25,29 +26,81 @@
 			font-weight: 600;
 		}
 		.change-background {
-			background-color: #FAEBE0;
-			
+			/*background-color: #FAEBE0;*/
+			margin: 20px;
+			/*z-index: -1;*/
 		}
 		.blog-body {
-			padding: 1.5rem;
+			padding: 10px;
+			
+		}
+		.contact-icons {
+			color: gray;
+		}
+		#top-button {
+			color: black;
 		}
 	</style>
 	<title>AJAX-Blog</title>
 </head>
 <body class="">
-	<header>
-		<img width="75" height="75" src="img/jackie-modified.png" alt="profile-pic">
+	<a href="" id="top"></a>
+	<header class="container text-center mt-5">
+		<img width="65" height="65" src="img/jackie-modified.png" alt="profile-pic">
 		<div class="container">
-			<h1 class="text-center">Day Dreaming</h1>
+			<h1>Day Dreamer Archives</h1>
+			<p style="color: gray">Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices.</p>
 		</div>
+		<ul class="list-unstyled d-flex justify-content-center">
+			<li class="mx-2 contact-icons">
+				<i class="bi bi-twitter"></i>
+			</li>
+			<li class="mx-2 contact-icons">
+				<i class="bi bi-instagram"></i>
+			</li>
+			<li class="mx-2 contact-icons">
+				<i class="bi bi-facebook"></i>
+			</li>
+			<li class="mx-2 contact-icons">
+				<i class="bi bi-linkedin"></i>
+			</li>
+			<li class="mx-2 contact-icons">
+				<i class="bi bi-github"></i>
+			</li>
+		</ul>
 	</header>
+	<nav class="navbar navbar-expand-md navbar-light bg-white justify-content-center">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav container d-md-flex justify-content-center">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">About Me</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Portfolio</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+					<div class="dropdown-menu aria" aria-labelledby="navbarDropdown">
+						<div id="category-items"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
 	<div class="change-background">
 		<div class="blog-body">
 			<div id="posts"></div>
 		</div>
 	</div>
-	
-	
+	<div class="text-right container">
+		<a id="top-button" href="#top">Back to Top</a>
+	</div>
 	
 	
 	
@@ -68,28 +121,29 @@
 				var blogData = '';
 				for (let i = 0; i < data.length; i++) {
 					blogData += '<ul class="list-unstyled">' + '<li class="media my-5">' +
-							'<img src="https://placebear.com/64/64" class="align-self-start mr-3" alt="bear">' +
 							'<div class="media-body">' +
-								'<h5 class="mt-0">' + data[i].title + '</h5>' + '<div class="text-container">' + '<span class="blog-post">' +
-							data[i].content + '</span>' + '</div>' + '</div>' +
+							'<div class="text-container border">' + '<h3 class="mt-0 text-center">' + data[i].title + '</h3>' + '<span class="blog-post">' +
+							data[i].content + '</span>' + '<br>' + '<br>' + '<div>' + '</div>' + '<i class="bi bi-clock">' + '<span class="mx-2">' + data[i].date + '</span>' + '</i>' + '</div>' + '</div>' +
 							
 							
 							'</li>' + '</ul>'
 				}
+				var category
+				// insert data into html
 				$('#posts').html(blogData)
+				
+				// add reload event listener
+				// $('#reload').click(function () {
+				// 	location.reload();
+				// })
+				
 				// add classes
 				$('h5').addClass('post-header');
+				
 				// Styling
 				// $('.blog-post').css('margin', '5px')
 				$('.post-header').css({'color': '#212121', 'font-weight': 'bold'})
-				$('.text-container').css('padding', '10px').hover(
-						function () {
-							$(this).css('background-color', 'white')
-						},
-						function () {
-							$(this).css('background-color', '#FAEBE0')
-						}
-				)
+				$('.text-container').css({'background-color': '#F8F5F1', 'padding': '25px'})
 			})
 			
 		})
