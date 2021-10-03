@@ -85,9 +85,14 @@
 					<a href="#" class="nav-link">Portfolio</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-					<div class="dropdown-menu aria" aria-labelledby="navbarDropdown">
-						<div id="category-items"></div>
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Categories</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a href="#" class="dropdown-item">Greek</a>
+						<a href="#" class="dropdown-item">Family</a>
+						<a href="#" class="dropdown-item">Life</a>
+						<a href="#" class="dropdown-item">Traveling</a>
+						<a href="#" class="dropdown-item">Politics</a>
+<!--						<div id="category-items"></div>-->
 					</div>
 				</li>
 			</ul>
@@ -117,6 +122,7 @@
 				//	verify data is being pulled by console log
 				console.log(data);
 				
+				
 			//	PRINT DATA USING FOR LOOP
 				var blogData = '';
 				for (let i = 0; i < data.length; i++) {
@@ -128,7 +134,10 @@
 							
 							'</li>' + '</ul>'
 				}
-				var category
+				var categoryData = '';
+				for (let i = 0; i < data.length; i++) {
+					categoryData += '<a class="dropdown-item" href="#">' + data[i].categories + '</a>'
+				}
 				// insert data into html
 				$('#posts').html(blogData)
 				
