@@ -8,13 +8,43 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Playfair+Display&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Maven Pro', sans-serif;
+			color: #753422;
+			font-weight: 300;
+		}
+		
+		li {
+			background-color: rgba(255, 255, 255, 0);
+		}
+		h1 {
+			font-family: 'Playfair Display', serif;
+			color: #212121;
+			font-weight: 600;
+		}
+		.change-background {
+			background-color: #FAEBE0;
+			
+		}
+		.blog-body {
+			padding: 1.5rem;
+		}
+	</style>
 	<title>AJAX-Blog</title>
 </head>
-<body class="m-5">
-	<h1 class="text-center">AJAX BLOG SITE</h1>
-	<div id="posts">
-	
+<body class="">
+	<header>
+		<img width="75" height="75" src="img/jackie-modified.png" alt="profile-pic">
+		<div class="container">
+			<h1 class="text-center">Day Dreaming</h1>
+		</div>
+	</header>
+	<div class="change-background">
+		<div class="blog-body">
+			<div id="posts"></div>
+		</div>
 	</div>
 	
 	
@@ -29,7 +59,6 @@
 	<script>
 		"use strict"
 		$(document).ready(function () {
-			
 			//	GET REQUEST FOR BLOG SITE DATA
 			$.get('/data/blog.json').done(function (data) {
 				//	verify data is being pulled by console log
@@ -38,16 +67,29 @@
 			//	PRINT DATA USING FOR LOOP
 				var blogData = '';
 				for (let i = 0; i < data.length; i++) {
-					blogData += '<div class="media my-5">' +
+					blogData += '<ul class="list-unstyled">' + '<li class="media my-5">' +
 							'<img src="https://placebear.com/64/64" class="align-self-start mr-3" alt="bear">' +
 							'<div class="media-body">' +
-								'<h5 class="mt-0">' + data[i].title + '</h5>' +
-							data[i].content + '</div>' +
+								'<h5 class="mt-0">' + data[i].title + '</h5>' + '<div class="text-container">' + '<span class="blog-post">' +
+							data[i].content + '</span>' + '</div>' + '</div>' +
 							
 							
-							'</div>'
+							'</li>' + '</ul>'
 				}
 				$('#posts').html(blogData)
+				// add classes
+				$('h5').addClass('post-header');
+				// Styling
+				// $('.blog-post').css('margin', '5px')
+				$('.post-header').css({'color': '#212121', 'font-weight': 'bold'})
+				$('.text-container').css('padding', '10px').hover(
+						function () {
+							$(this).css('background-color', 'white')
+						},
+						function () {
+							$(this).css('background-color', '#FAEBE0')
+						}
+				)
 			})
 			
 		})
