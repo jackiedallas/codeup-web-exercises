@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	
+	<title>AJAX-Blog</title>
+</head>
+<body class="m-5">
+	<h1 class="text-center">AJAX BLOG SITE</h1>
+	<div id="posts">
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--	<script src="js/jquery.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script>
+		"use strict"
+		$(document).ready(function () {
+			
+			//	GET REQUEST FOR BLOG SITE DATA
+			$.get('/data/blog.json').done(function (data) {
+				//	verify data is being pulled by console log
+				console.log(data);
+				
+			//	PRINT DATA USING FOR LOOP
+				var blogData = '';
+				for (let i = 0; i < data.length; i++) {
+					blogData += '<div class="media my-5">' +
+							'<img src="https://placebear.com/64/64" class="align-self-start mr-3" alt="bear">' +
+							'<div class="media-body">' +
+								'<h5 class="mt-0">' + data[i].title + '</h5>' +
+							data[i].content + '</div>' +
+							
+							
+							'</div>'
+				}
+				$('#posts').html(blogData)
+			})
+			
+		})
+		
+	</script>
+</body>
+</html>
