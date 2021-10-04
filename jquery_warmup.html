@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<title></title>
 </head>
-<body class="">
+<body class="container">
 	<p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores aut commodi cum dolore doloribus eligendi eveniet illum iusto libero mollitia nemo nisi, non quas quia saepe sapiente soluta ullam?</p>
 
 
@@ -24,8 +24,7 @@
 <script>
 	$(document).ready(function () {
 		var para1 = $('#para1').html()
-		
-		$('p').click(function () {
+		$('p').click(function (e) {
 			alert(para1);
 		})
 	})
