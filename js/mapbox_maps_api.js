@@ -53,7 +53,7 @@ $(document).ready(function () {
 	marker.setPopup(alamoPopup)
 	
 	// the  geocode method from mapbox-geocoder-utils.js
-	geocode("Aviano, Italy", 	mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw'
+	geocode("4307 albert martin san antonio", 	mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw'
 ).then(function(result) {
 		console.log(result);
 		map.setCenter(result);
