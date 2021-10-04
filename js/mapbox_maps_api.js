@@ -1,7 +1,10 @@
 "use strict"
 
 $(document).ready(function () {
-	mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw';
+	// access Token
+	var myToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw'
+	
+	mapboxgl.accessToken = myToken;
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v9',
@@ -50,7 +53,7 @@ $(document).ready(function () {
 	marker.setPopup(alamoPopup)
 	
 	// the  geocode method from mapbox-geocoder-utils.js
-	geocode("7211 Old Military Rd. Theodore, Al 36582", 	mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw'
+	geocode("Aviano, Italy", 	mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2llZGFsbGFzIiwiYSI6ImNrdWN1NmEwbjE0MTMyeG84Y3pmMnN6encifQ.pTLanvGV47qgP0FzumCIOw'
 ).then(function(result) {
 		console.log(result);
 		map.setCenter(result);
