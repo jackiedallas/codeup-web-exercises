@@ -40,6 +40,12 @@
 		#top-button {
 			color: black;
 		}
+		hr {
+			width: 80%;
+			height: 2px;
+			border: none;
+			background-color: black;
+		}
 	</style>
 	<title>AJAX-Blog</title>
 </head>
@@ -132,7 +138,7 @@
 							data[i].content + '</span>' + '<br>' + '<br>' + '<div>' + '</div>' + '<i class="bi bi-clock">' + '<span class="mx-2">' + data[i].date + '</span>' + '</i>' + '</div>' + '</div>' +
 							
 							
-							'</li>' + '</ul>'
+							'</li>' + '</ul>' + '<hr>'
 				}
 				var categoryData = '';
 				for (let i = 0; i < data.length; i++) {
