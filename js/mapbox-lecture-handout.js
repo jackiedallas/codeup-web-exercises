@@ -109,10 +109,10 @@ homeMarker.setPopup(homePopup)
 //  *      // do something with results
 //  *  })
 
-// geocode("los angeles, ca", mapBoxKey).then(function (results) {
-// 	console.log(results)
-// 	map.setCenter(results)
-// })
+geocode("Ljubljana, Slovenia", mapBoxKey).then(function (results) {
+	console.log(results)
+	map.setCenter(results)
+})
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 // geocode("los angeles, ca", mapBoxKey).then(function (results) {
