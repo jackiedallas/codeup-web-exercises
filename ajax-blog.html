@@ -98,7 +98,7 @@
 						<a href="#" class="dropdown-item">Life</a>
 						<a href="#" class="dropdown-item">Traveling</a>
 						<a href="#" class="dropdown-item">Politics</a>
-<!--						<div id="category-items"></div>-->
+						<div id="category-items"></div>
 					</div>
 				</li>
 			</ul>
@@ -130,20 +130,28 @@
 				
 				
 			//	PRINT DATA USING FOR LOOP
+				
+				
+				
 				var blogData = '';
 				for (let i = 0; i < data.length; i++) {
-					blogData += '<ul class="list-unstyled">' + '<li class="media my-5">' +
-							'<div class="media-body">' +
-							'<div class="text-container border">' + '<h3 class="mt-0 text-center">' + data[i].title + '</h3>' + '<span class="blog-post">' +
-							data[i].content + '</span>' + '<br>' + '<br>' + '<div>' + '</div>' + '<i class="bi bi-clock">' + '<span class="mx-2">' + data[i].date + '</span>' + '</i>' + '</div>' + '</div>' +
-							
-							
-							'</li>' + '</ul>' + '<hr>'
+					blogData += '<ul class="list-unstyled">';
+					blogData += '<li class="media my-5">';
+					blogData += '<div class="media-body">';
+					blogData += '<div class="text-container border">';
+					blogData += '<h3 class="mt-0 text-center">' + data[i].title + '</h3>';
+					blogData += '<span class="blog-post">' + data[i].content + '</span>';
+					blogData += '<br>' + '<br>';
+					blogData += '<i class="bi bi-clock">';
+					blogData += '<span class="mx-2">' + data[i].date + '</span>';
+					blogData += '</i>' + '</div>' + '</div>' + '</li>' + '</ul>';
+					blogData += '<hr>';
 				}
-				var categoryData = '';
-				for (let i = 0; i < data.length; i++) {
-					categoryData += '<a class="dropdown-item" href="#">' + data[i].categories + '</a>'
-				}
+				// var categoryData = '';
+				// for (let i = 0; i < data.length; i++) {
+				// 	categoryData += '<a class="dropdown-item" href="#">' + data[i].categories.join(' ') + '</a>'
+				// }
+				// $('#category-items').html(categoryData)
 				// insert data into html
 				$('#posts').html(blogData)
 				
