@@ -64,6 +64,13 @@ $(document).ready(function () {
 		// bearing: -60 // bearing in degrees
 	})
 	
+	map.addControl(
+		new MapboxGeocoder({
+			accessToken: mapBoxKey,
+			mapboxgl: mapboxgl
+		})
+	)
+	
 	// geocode("Jurčkova Cesta 225, 1000 Ljubljana, Slovenia", mapBoxKey).then(function (results) {
 	// 	// console.log(results)
 	// 	var foodMarker = new mapboxgl.Marker({color: 'red'})
@@ -81,13 +88,16 @@ $(document).ready(function () {
 		geocode(restaurant.location, mapBoxKey).then(function (coordinates) {
 			var favPopup = new mapboxgl.Popup({
 				closeOnMove: true,
+				
 			})
 				.setHTML(
+					'<div class="container">' +
 					restaurant.popupHTML +
 					'<img height="125" width="175" src="' + restaurant.image + '"' + '>' +
 					restaurant.rating +
-					'<p>' + restaurant.location + '</p>' +
-					restaurant.recommendation
+					'<div>' + restaurant.location + '</div>' +
+					'<div>' + restaurant.recommendation + '</div>',
+					'</div>'
 				)
 				
 			var favSpotsMarker = new mapboxgl.Marker({color: 'red'})
