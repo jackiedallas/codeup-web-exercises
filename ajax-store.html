@@ -27,7 +27,12 @@
 	    </thead>
 	    <tbody id="insertProducts"></tbody>
 	</table>
+	<div>
+		<button class="refresh btn btn-dark">Refresh</button>
+	</div>
 </div>
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
@@ -47,12 +52,16 @@
 					'<td>' + data[i].title + '</td>' +
 					'<td>' + data[i].quantity + '</td>' +
 					'<td>' + '$' + data[i].price + '</td>' +
-					'<td>' + data[i].categories + '</td>' +
+					'<td>' + data[i].categories.join(', ') + '</td>' +
 					'</tr>'
 		}
 		$('#insertProducts').html(tableData)
 	});
 	$('body').css('font-family', 'helvetica')
+	$('.refresh').click(function (e) {
+		e.preventDefault();
+		location.reload()
+	})
 	
 	
     // TODO: Take the data from inventory.json and append it to the products table

@@ -59,6 +59,17 @@ $(document).ready(function () {
 		foodMarker.setPopup(foodPopUp)
 	})
 	
+	restaurants.forEach(function (data) {
+		var locArr = []
+		locArr += data.location
+		console.log(locArr)
+		var locationObj = mapboxgl.LngLat.convert(locArr)
+		console.log(locationObj)
+		// new mapboxgl.Marker()
+		// 	.setLngLat(locArr)
+		// 	.addTo(map);
+	})
+	
 	
 
 })
