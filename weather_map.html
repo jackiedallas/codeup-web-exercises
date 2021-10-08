@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<!--Mapbox CSS-->
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
 	<!--Custom CSS-->
 	<link rel="stylesheet" href="css/weather_map.css">
 	<title></title>
@@ -19,9 +21,9 @@
 	
 
 	<!--Header-->
-	<div class="nav navbar top-header justify-content-start">
+	<div class="nav navbar top-header justify-content-center">
 	<div class="navbar-brand">
-		<h1>MAPBOX | WEATHER PROJECT</h1>
+		<h1 class="fancy-brand">MAPBOX | WEATHER PROJECT</h1>
 	</div>
 </div>
 	
@@ -36,7 +38,7 @@
 		</form>
 		<button class="btn btn-sm btn-outline-dark mx-1" type="button" id="refresh">Start Over</button>
 	</div>
-</div>
+	</div>
 	
 	<!--container for all map project items-->
 	
@@ -46,10 +48,26 @@
 		<!--Add cards here from javascript-->
 		<div class="d-flex justify-content-center" id="forecastContainer"></div>
 	
+		<!--radio button for map styles-->
+		<div id="menu" class="text-center p-3">
+			<input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+			<!-- See a list of Mapbox-hosted public styles at -->
+			<!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+			<label for="satellite-v9">satellite</label>
+			<input id="light-v10" type="radio" name="rtoggle" value="light">
+			<label for="light-v10">light</label>
+			<input id="dark-v10" type="radio" name="rtoggle" value="dark">
+			<label for="dark-v10">dark</label>
+			<input id="streets-v11" type="radio" name="rtoggle" value="streets">
+			<label for="streets-v11">streets</label>
+			<input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+			<label for="outdoors-v11">outdoors</label>
+		</div>
 		<!--Map-->
-		<div class="pt-3">
+		<div class="">
 		<div class="mx-auto" id="map"></div>
 		</div>
+	
 	
 	
 	<!--mapbox scripts-->
