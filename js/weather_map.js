@@ -3,11 +3,9 @@
 $(document).ready(function () {
 	$('#current-weather').click(function (event) { // using a click event to get a lat/long from user input for 5-day forecast
 		event.preventDefault();
-		// var latitude = '';
-		// var longitude = '';
 		$('#menu').css('visibility', 'visible')
 		geocode($('#location-search').val(), mapBoxKey).then(function (results) { // used geocode function to convert user input to lat/long coordinates
-			console.log(results)
+			// console.log(results)
 			// Create Map
 			mapboxgl.accessToken = mapBoxKey;
 			var weatherMap = new mapboxgl.Map({
@@ -18,23 +16,23 @@ $(document).ready(function () {
 			})
 			
 			
-			// drag marker functionality
+			// drag marker functionality & get new forecast
 			var locationMarker = new mapboxgl.Marker({
 				draggable: true,
 				color: 'red'
 			})
-
-				
 				.setLngLat(results)
 				.addTo(weatherMap)
 				.on('dragend', () => {
 					var results = locationMarker.getLngLat()
 					var coordArr = Object.values(results)
+					console.log(results)
+					console.log(coordArr)
 
 					$.get('https://api.openweathermap.org/data/2.5/onecall', {
 						appid: weatherMapKey,
-						lat: coordArr[1], // came from geocode function & user input
-						lon: coordArr[0], // came from geocode function & user input
+						lat: coordArr[1],
+						lon: coordArr[0],
 						units: 'imperial'
 					})
 						.done(function (weather) {
@@ -87,16 +85,9 @@ $(document).ready(function () {
 					// alert('you moved the marker')
 				})
 			
-			// locationMarker.flyTo(results);
-			
-			
-			
-			
 			// change map style
-			
 			const layerList = document.getElementById('menu');
 			const inputs = layerList.getElementsByTagName('input');
-			
 			for (const input of inputs) {
 				input.onclick = (layer) => {
 					const layerId = layer.target.id;
@@ -104,7 +95,7 @@ $(document).ready(function () {
 				};
 			}
 			
-			// get weather data
+			// get weather data from search
 			$.get('https://api.openweathermap.org/data/2.5/onecall', {
 				appid: weatherMapKey,
 				lat: results[1], // came from geocode function & user input
@@ -112,7 +103,7 @@ $(document).ready(function () {
 				units: 'imperial'
 			})
 				.done(function (weather) {
-					console.log(weather)
+					// console.log(weather)
 					var dailyWx = weather.daily; // stored daily weather data in variable to iterate easier
 					// console.log(dailyWx);
 					var userLocation = $('#location-search').val();
@@ -164,23 +155,4 @@ $(document).ready(function () {
 		event.preventDefault();
 		window.location.reload();
 	})
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 })
