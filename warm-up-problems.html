@@ -19,7 +19,7 @@
 		var stringEvens = evens.join(' ');
 		console.log(stringEvens);
 	}
-	logEvens(10);
+	// logEvens(10);
 	
 	function logNum(number) {
 		for (let i = 1; i <= number ; i++) {
@@ -30,7 +30,17 @@
 			}
 		}
 	}
-	logNum(10);
+	// logNum(10);
+	
+	function convertDateTime(num) {
+		return new Date(num * 1000).toLocaleDateString('en-US', {
+			weekday: 'short',
+			day: 'numeric',
+			year: 'numeric',
+			month: 'long'
+		});
+	}
+	console.log(convertDateTime(1618317040));
 	
 </script>
 </body>

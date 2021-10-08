@@ -76,6 +76,10 @@ $(document).ready(function () {
 				})
 		})
 	})
+	$('#refresh').click(function (event) {
+		event.preventDefault();
+		window.location.reload();
+	})
 	
 
 	
