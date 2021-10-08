@@ -21,17 +21,24 @@ $(document).ready(function () {
 				units: 'imperial'
 			})
 				.done(function (weather) {
+					console.log(weather)
 					var dailyWx = weather.daily; // stored daily weather data in variable to iterate easier
-					console.log(dailyWx);
-					
+					// console.log(dailyWx);
+					var userLocation = $('#location-search').val();
 					var cards = '';
 					for (let i = 0; i < dailyWx.length ; i++) {
 						if (i <= 4) {
 							// variable declarations for dates and times
-							let dt = new Date(dailyWx[i].dt * 1000).toLocaleDateString();
+							let dt = new Date(dailyWx[i].dt * 1000).toLocaleDateString('en-US',{
+								weekday: 'short',
+								day: 'numeric',
+								year: 'numeric',
+								month: 'long'
+							});
 							let sr = new Date(dailyWx[i].sunrise * 1000).toLocaleTimeString();
 							let ss = new Date(dailyWx[i].sunset * 1000).toLocaleTimeString();
 							let precipitation = dailyWx[i].pop * 100;
+							
 							
 							// data for html
 							cards += '<div class="card-deck pt-5">' +
@@ -39,8 +46,8 @@ $(document).ready(function () {
 								'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
 								'<div class="card-body">' +
 								'<h3 class="card-title text-center">' + dailyWx[i].weather[0].description + '</h3>' +
-								'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + dailyWx[i].temp.max + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + dailyWx[i].temp.min + '&deg' +                                 'F' + '</p>' +
-								'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + dailyWx[i].feels_like.day + '&deg' + 'F' + '</p>' +
+								'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + dailyWx[i].temp.max.toFixed(1) + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + dailyWx[i].temp.min.toFixed(1) + '&deg' +                                 'F' + '</p>' +
+								'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + dailyWx[i].feels_like.day.toFixed(1) + '&deg' + 'F' + '</p>' +
 								'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + dailyWx[i].humidity + '%' + '</p>' +
 								'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + dailyWx[i].uvi.toFixed(2) + '</p>' +
 								'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + dailyWx[i].wind_speed + 'm/s, ' + dailyWx[i].wind_deg + '&deg' + '</p>' +
@@ -52,7 +59,9 @@ $(document).ready(function () {
 								'</div>' +
 								'</div>'
 						}
+						$('#city-header').html('<h1 class="text-center">' + userLocation + '</h1>');
 						$('#forecastContainer').html(cards) // insert into html here
+						
 					}
 				})
 		})
