@@ -16,11 +16,15 @@
 	<title></title>
 </head>
 <body class="">
+	
 
-<div class="nav navbar top-header">
+	<!--Header-->
+	<div class="nav navbar top-header">
 	<div class="navbar-brand">MapBox Project</div>
 </div>
-<div class="container">
+	
+	<!--Search Bar area-->
+	<div class="container">
 	<div class="d-flex justify-content-center">
 		<form class="form-inline">
 			<label class="mx-1 pt-1" for="location-search">Location</label>
@@ -29,40 +33,17 @@
 			<button class="btn btn-sm btn-dark mx-1" type="submit" id="current-weather">Get 5-Day Forecast</button>
 		</form>
 	</div>
-	
-	
-	
-	<div class="d-flex container justify-content-center" id="forecastContainer">
-<!--		<div class="card">-->
-<!--			<div class="card-header"><h5>Date</h5></div>-->
-<!--			<div class="card-body">-->
-<!--				<h3 class="card-title">Weather Info</h3>-->
-<!--				<p class="card-text">Temp</p>-->
-<!--				<p class="card-text">Feels Like</p>-->
-<!--				<p class="card-text">Humidity</p>-->
-<!--				<p class="card-text">Pressure</p>-->
-<!--				<p class="card-text">Wind Speed</p>-->
-<!--				<p class="card-text">UV Index</p>-->
-<!--				<p class="card-text">Sunrise</p>-->
-<!--				<p class="card-text">Sunset</p>-->
-<!--				<p class="card-text">Wind Direction</p>-->
-<!--			</div>-->
-<!--		</div>-->
-		
-	</div>
-
-
-<div class="mx-auto" id="map">
 </div>
+	
+	
+	<!--Add cards here from javascript-->
+	<div class="d-flex container justify-content-center" id="forecastContainer"></div>
 
+	<!--Map-->
+	<div class="mx-auto" id="map"></div>
 
-
-
-
-
-
-
-	<!--	mapbox scripts-->
+	
+	<!--mapbox scripts-->
 	<script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
 	<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
 	<!--Bootstrap & Jquery-->
