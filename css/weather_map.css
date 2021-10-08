@@ -1,3 +1,13 @@
 #map {
 	height: 900px;
 }
+
+/*Card Styles*/
+.cardText {
+	font-weight: bold;
+}
+
+#cards {
+	width: 260px;
+	height: 500px;
+}
