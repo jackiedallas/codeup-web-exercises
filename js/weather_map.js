@@ -41,7 +41,7 @@ $(document).ready(function () {
 							
 							
 							// data for html
-							cards += '<div class="card-deck pt-5">' +
+							cards += '<div class="card-deck pt-3">' +
 								'<div class="card mx-5" id="cards">' +
 								'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
 								'<div class="card-body">' +
@@ -59,8 +59,18 @@ $(document).ready(function () {
 								'</div>' +
 								'</div>'
 						}
-						$('#city-header').html('<h1 class="text-center">' + userLocation + '</h1>');
+						$('#city-header').html('<h2 class="text-center">' + userLocation + '</h2>');
 						$('#forecastContainer').html(cards) // insert into html here
+						
+						
+						// Create Map
+						mapboxgl.accessToken = mapBoxKey;
+						var weatherMap = new mapboxgl.Map({
+							container: 'map',
+							style: 'mapbox://styles/mapbox/streets-v11',
+							zoom: 10,
+							center: [latitude, longitude]
+						})
 						
 					}
 				})
@@ -84,12 +94,5 @@ $(document).ready(function () {
 	
 	
 	
-	// // Create Map
-	// mapboxgl.accessToken = mapBoxKey;
-	// var weatherMap = new mapboxgl.Map({
-	// 	container: 'map',
-	// 	style: 'mapbox://styles/mapbox/streets-v11',
-	// 	zoom: 10,
-	// 	center: [-98.4861, 29.4252]
-	// })
+	
 })

@@ -15,12 +15,14 @@
 	<link rel="stylesheet" href="css/weather_map.css">
 	<title></title>
 </head>
-<body class="">
+<body class="my-3">
 	
 
 	<!--Header-->
-	<div class="nav navbar top-header">
-	<div class="navbar-brand">MapBox Project</div>
+	<div class="nav navbar top-header justify-content-start">
+	<div class="navbar-brand">
+		<h1>MAPBOX | WEATHER PROJECT</h1>
+	</div>
 </div>
 	
 	<!--Search Bar area-->
@@ -35,15 +37,19 @@
 	</div>
 </div>
 	
-	<!--city header-->
-	<div class="pt-5" id="city-header"></div>
+	<!--container for all map project items-->
 	
-	<!--Add cards here from javascript-->
-	<div class="d-flex container justify-content-center" id="forecastContainer"></div>
-
-	<!--Map-->
-	<div class="mx-auto" id="map"></div>
-
+		<!--city header-->
+		<div class="pt-3" id="city-header"></div>
+		
+		<!--Add cards here from javascript-->
+		<div class="d-flex justify-content-center" id="forecastContainer"></div>
+	
+		<!--Map-->
+		<div class="pt-3">
+		<div class="mx-auto" id="map"></div>
+		</div>
+	
 	
 	<!--mapbox scripts-->
 	<script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
