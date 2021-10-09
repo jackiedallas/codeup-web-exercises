@@ -12,7 +12,9 @@
 body {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
+	background-color: #FDFAF6;
 }
+
 
 /*Card Styles*/
 .cardText {
@@ -23,6 +25,14 @@ body {
 	background-color: transparent;
 	width: 300px;
 	/*height: 500px;*/
+}
+
+.animate__animated.animate__pulse {
+	--animate-duration: .3s;
+}
+
+.animate__animated.animate__bounceInLeft {
+	--animate-duration: 3s;
 }
 
 

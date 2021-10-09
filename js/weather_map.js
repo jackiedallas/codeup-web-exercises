@@ -31,7 +31,7 @@ $(document).ready(function () {
 					
 					
 					// data for html
-					cards += '<div class="card-deck card-deck-font pt-3">' +
+					cards += '<div class="card-deck card-deck-font pt-3 animate__animated animate__bounceInLeft">' +
 						'<div class="card mx-5" id="cards">' +
 						'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
 						'<div class="card-body">' +
@@ -170,7 +170,7 @@ $(document).ready(function () {
 										
 										
 										// data for html
-										cards += '<div class="card-deck card-deck-font pt-3">' +
+										cards += '<div class="card-deck card-deck-font pt-3 animate__animated animate__pulse">' +
 											'<div class="card mx-5" id="cards">' +
 											'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
 											'<div class="card-body">' +
@@ -250,7 +250,7 @@ $(document).ready(function () {
 										
 										
 										// data for html
-										cards += '<div class="card-deck card-deck-font pt-3">' +
+										cards += '<div class="card-deck card-deck-font pt-3 animate__animated animate__bounceInLeft">' +
 											'<div class="card mx-5" id="cards">' +
 											'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
 											'<div class="card-body">' +
