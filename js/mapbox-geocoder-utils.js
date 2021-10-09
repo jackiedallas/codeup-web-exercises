@@ -64,3 +64,44 @@ function reverseGeocode(coordinates, token) {
 // 			return data.features[0].place_name;
 // 		});
 // }
+
+function renderCards(weather) {
+	var dailyWx = weather.daily;
+	
+	var cards = '';
+	for (let i = 0; i < dailyWx.length; i++) {
+		if (i <= 4) {
+			// variable declarations for dates and times
+			let dt = new Date(dailyWx[i].dt * 1000).toLocaleDateString('en-US', {
+				weekday: 'short',
+				day: 'numeric',
+				year: 'numeric',
+				month: 'long'
+			});
+			let sr = new Date(dailyWx[i].sunrise * 1000).toLocaleTimeString();
+			let ss = new Date(dailyWx[i].sunset * 1000).toLocaleTimeString();
+			let precipitation = dailyWx[i].pop * 100;
+			
+			
+			// data for html
+			cards += '<div class="card-deck card-deck-font pt-3">' +
+				'<div class="card mx-5" id="cards">' +
+				'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
+				'<div class="card-body">' +
+				'<h3 class="card-title text-center">' + dailyWx[i].weather[0].description + '</h3>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + dailyWx[i].temp.max.toFixed(1) + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + dailyWx[i].temp.min.toFixed(1) + '&deg' + 'F' + '</p>' +
+				'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + dailyWx[i].feels_like.day.toFixed(1) + '&deg' + 'F' + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + dailyWx[i].humidity + '%' + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + dailyWx[i].uvi.toFixed(2) + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + dailyWx[i].wind_speed + 'm/s, ' + dailyWx[i].wind_deg + '&deg' + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Precipitation: ' + '</span>' + parseInt(precipitation) + '%' + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Pressure: ' + '</span>' + dailyWx[i].pressure + 'mb' + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Sunrise: ' + '</span>' + sr + '</p>' +
+				'<p class="card-text">' + '<span class="cardText">' + 'Sunset: ' + '</span>' + ss + '</p>' +
+				'</div>' +
+				'</div>' +
+				'</div>'
+		}
+	}
+	return cards;
+}
