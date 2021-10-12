@@ -13,8 +13,12 @@ $(document).ready(function () {
 		units: 'imperial'
 	})
 		.done(function (weather) {
+			console.log(weather)
+			// const {lat, lon, timezone, daily} = weather;
+			// const {clouds, dew_point, humidity, moon_phase, pressure} = daily[0];
+			// console.log(moon_phase)
+			// console.log(humidity)
 			var dailyWx = weather.daily;
-			
 			var cards = '';
 			for (let i = 0; i < dailyWx.length; i++) {
 				if (i <= 4) {
@@ -28,6 +32,8 @@ $(document).ready(function () {
 					let sr = new Date(dailyWx[i].sunrise * 1000).toLocaleTimeString();
 					let ss = new Date(dailyWx[i].sunset * 1000).toLocaleTimeString();
 					let precipitation = dailyWx[i].pop * 100;
+					const {humidity, uvi, wind_speed, pressure} = dailyWx[i];
+					// console.log(humidity)
 					
 					
 					// data for html
@@ -38,11 +44,11 @@ $(document).ready(function () {
 						'<h3 class="card-title text-center">' + dailyWx[i].weather[0].description + '</h3>' +
 						'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + dailyWx[i].temp.max.toFixed(1) + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + dailyWx[i].temp.min.toFixed(1) + '&deg' + 'F' + '</p>' +
 						'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + dailyWx[i].feels_like.day.toFixed(1) + '&deg' + 'F' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + dailyWx[i].humidity + '%' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + dailyWx[i].uvi.toFixed(2) + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + dailyWx[i].wind_speed + 'm/s, ' + dailyWx[i].wind_deg + '&deg' + '</p>' +
+						'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + humidity + '%' + '</p>' +
+						'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + uvi.toFixed(2) + '</p>' +
+						'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + wind_speed + 'm/s, ' + dailyWx[i].wind_deg + '&deg' + '</p>' +
 						'<p class="card-text">' + '<span class="cardText">' + 'Precipitation: ' + '</span>' + parseInt(precipitation) + '%' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Pressure: ' + '</span>' + dailyWx[i].pressure + 'mb' + '</p>' +
+						'<p class="card-text">' + '<span class="cardText">' + 'Pressure: ' + '</span>' + pressure + 'mb' + '</p>' +
 						'<p class="card-text">' + '<span class="cardText">' + 'Sunrise: ' + '</span>' + sr + '</p>' +
 						'<p class="card-text">' + '<span class="cardText">' + 'Sunset: ' + '</span>' + ss + '</p>' +
 						'</div>' +

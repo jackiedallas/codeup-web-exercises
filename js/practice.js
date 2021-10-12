@@ -264,3 +264,9 @@ function liveSearchCoffees() {
 
 var searchArea = document.querySelector('#search-area');
 searchArea.addEventListener('keyup', liveSearchCoffees);
+
+
+
+
+
+
