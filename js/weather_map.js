@@ -182,32 +182,58 @@ $(document).ready(function () {
 										});
 										let sr = new Date(dailyWx[i].sunrise * 1000).toLocaleTimeString();
 										let ss = new Date(dailyWx[i].sunset * 1000).toLocaleTimeString();
-										let precipitation = dailyWx[i].pop * 100;
+										let precipitation = parseInt(dailyWx[i].pop * 100);
+										let description = dailyWx[i].weather[0].description
+										let highTemp = dailyWx[i].temp.max.toFixed(1)
+										let lowTemp = dailyWx[i].temp.min.toFixed(1)
+										let uvi = dailyWx[i].uvi.toFixed(2)
+										let feelsLike = dailyWx[i].feels_like.day.toFixed(1)
 										
+										const {humidity, wind_speed, pressure, wind_deg} = dailyWx[i];
 										
 										// data for html
-										cards += '<div class="card-deck card-deck-font pt-3 animate__animated animate__pulse">' +
-											'<div class="card bg-dark text-white mx-5" id="cards">' +
-											'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
-											'<div class="card-body">' +
-											'<h3 class="card-title text-center">' + dailyWx[i].weather[0].description + '</h3>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + dailyWx[i].temp.max.toFixed(1) + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + dailyWx[i].temp.min.toFixed(1) + '&deg' + 'F' + '</p>' +
-											'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + dailyWx[i].feels_like.day.toFixed(1) + '&deg' + 'F' + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + dailyWx[i].humidity + '%' + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + dailyWx[i].uvi.toFixed(2) + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + dailyWx[i].wind_speed + 'm/s, ' + dailyWx[i].wind_deg + '&deg' + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Precipitation: ' + '</span>' + parseInt(precipitation) + '%' + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Pressure: ' + '</span>' + dailyWx[i].pressure + 'mb' + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Sunrise: ' + '</span>' + sr + '</p>' +
-											'<p class="card-text">' + '<span class="cardText">' + 'Sunset: ' + '</span>' + ss + '</p>' +
-											'</div>' +
-											'</div>' +
-											'</div>'
+										cards += `
+							<div class="card-deck card-deck-font pt-3 animate__animated animate__pulse">
+								<div class="card bg-dark text-white mx-5" id="cards">
+									<div class="card-header text-center">
+										<h5>${dt}</h5>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title text-center">${description}</h3>
+										<p class="card-text">
+											<span class="cardText">High: </span> ${highTemp}&deg F <span class="cardText">Low: </span> ${lowTemp}&deg F
+										</p>
+										<p class="card-text">
+											<span class="cardText">High Feels Like </span> ${feelsLike}&deg F
+										</p>
+										<p class="card-text">
+										<span class="cardText">Humidity: </span> ${humidity}%
+										</p>
+										<p class="card-text">
+											<span class="cardText">UV Index: </span> ${uvi}
+										</p>
+										<p class="card-text">
+											<span class="cardText">Wind Speed: </span> ${wind_speed}m/s, ${wind_deg}&deg
+										</p>
+										<p class="card-text">
+											<span class="cardText">Precipitation: </span> ${precipitation}%
+										</p>
+										<p class="card-text">
+											<span class="cardText">Pressure: </span> ${pressure}mb
+										</p>
+										<p class="card-text">
+											<span class="cardText">Sunrise: </span> ${sr}
+										</p>
+										<p class="card-text">
+											<span class="cardText">Sunset: </span> ${ss}
+										</p>
+									</div>
+								</div>
+							</div>
+					`
 									}
 									
 									$('#forecastContainer').html(cards) // insert into html here
-									
-									
 								}
 							})
 						// alert('you moved the marker')
