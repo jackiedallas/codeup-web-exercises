@@ -76,7 +76,6 @@ $(document).ready(function () {
 				$('#forecastContainer').html(cards) // insert into html here
 			}
 			
-			
 			// Create Map
 			mapboxgl.accessToken = mapBoxKey;
 			var weatherMap = new mapboxgl.Map({
@@ -85,7 +84,6 @@ $(document).ready(function () {
 				center: [-98.4861, 29.4252],
 				style: 'mapbox://styles/mapbox/streets-v11'
 			})
-			
 			
 			// really cool code, pretty sure it's a lot of es6 involved. not going to take credit but it's cool to see. continuing to study for comprehension.
 			weatherMap.on("load", () => {
@@ -144,7 +142,6 @@ $(document).ready(function () {
 						}, 2000);
 					})
 					.catch(console.error);
-				
 				
 				// drag marker functionality & get new forecast
 				var locationMarker = new mapboxgl.Marker({
