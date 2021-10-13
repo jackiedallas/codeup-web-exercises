@@ -38,7 +38,10 @@ $(document).ready(function () {
 		}
 	];
 	
-	const userLangs = languages.filter(lang => lang > 2);
-	console.log(userLangs)
+	let userLanguages = users.map(function (user) {
+		return user.languages;
+	})
+	console.log(userLanguages);
+	
 	
 })
