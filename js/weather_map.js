@@ -190,7 +190,7 @@ $(document).ready(function () {
 										
 										// data for html
 										cards += `
-							<div class="card-deck card-deck-font pt-3 animate__animated animate__bounceInLeft">
+							<div class="card-deck card-deck-font pt-3 animate__animated animate__pulse">
 								<div class="card bg-dark text-white mx-5" id="cards">
 									<div class="card-header text-center">
 										<h5>${dt}</h5>
