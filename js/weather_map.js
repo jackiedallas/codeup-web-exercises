@@ -1,11 +1,6 @@
 "use strict"
 
 $(document).ready(function () {
-	// $.get('https://api.rainviewer.com/public/weather-maps.json',{
-	//
-	// }).done(function (radar) {
-	// 	console.log(radar)
-	// })
 	$.get('https://api.openweathermap.org/data/2.5/onecall', {
 		appid: weatherMapKey,
 		lat: 29.4252,
@@ -14,10 +9,6 @@ $(document).ready(function () {
 	})
 		.done(function (weather) {
 			console.log(weather)
-			// const {lat, lon, timezone, daily} = weather;
-			// const {clouds, dew_point, humidity, moon_phase, pressure} = daily[0];
-			// console.log(moon_phase)
-			// console.log(humidity)
 			var dailyWx = weather.daily;
 			var cards = '';
 			for (let i = 0; i < dailyWx.length; i++) {
@@ -39,27 +30,47 @@ $(document).ready(function () {
 					let feelsLike = dailyWx[i].feels_like.day.toFixed(1)
 					
 					const {humidity, wind_speed, pressure, wind_deg} = dailyWx[i];
-					// console.log(humidity)
-					
 					
 					// data for html
-					cards += '<div class="card-deck card-deck-font pt-3 animate__animated animate__bounceInLeft">' +
-						'<div class="card bg-dark text-white mx-5" id="cards">' +
-						'<div class="card-header text-center">' + '<h5>' + dt + '</h5>' + '</div>' +
-						'<div class="card-body">' +
-						'<h3 class="card-title text-center">' + description + '</h3>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'High: ' + '</span>' + highTemp + '&deg' + 'F' + '<span class="cardText">' + ' Low: ' + '</span>' + lowTemp + '&deg' + 'F' + '</p>' +
-						'<p class="card-text">' + '<span class="">' + 'High Feels Like  ' + '</span>' + feelsLike + '&deg' + 'F' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Humidity: ' + '</span>' + humidity + '%' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'UV Index: ' + '</span>' + uvi + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Wind Speed: ' + '</span>' + wind_speed + 'm/s, ' + wind_deg + '&deg' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Precipitation: ' + '</span>' + precipitation + '%' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Pressure: ' + '</span>' + pressure + 'mb' + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Sunrise: ' + '</span>' + sr + '</p>' +
-						'<p class="card-text">' + '<span class="cardText">' + 'Sunset: ' + '</span>' + ss + '</p>' +
-						'</div>' +
-						'</div>' +
-						'</div>'
+					cards += `
+							<div class="card-deck card-deck-font pt-3 animate__animated animate__bounceInLeft">
+								<div class="card bg-dark text-white mx-5" id="cards">
+									<div class="card-header text-center">
+										<h5>${dt}</h5>
+									</div>
+									<div class="card-body">
+										<h3 class="card-title text-center">${description}</h3>
+										<p class="card-text">
+											<span class="cardText">High: </span> ${highTemp}&deg F <span class="cardText">Low: </span> ${lowTemp}&deg F
+										</p>
+										<p class="card-text">
+											<span class="cardText">High Feels Like </span> ${feelsLike}&deg F
+										</p>
+										<p class="card-text">
+										<span class="cardText">Humidity: </span> ${humidity}%
+										</p>
+										<p class="card-text">
+											<span class="cardText">UV Index: </span> ${uvi}
+										</p>
+										<p class="card-text">
+											<span class="cardText">Wind Speed: </span> ${wind_speed}m/s, ${wind_deg}&deg
+										</p>
+										<p class="card-text">
+											<span class="cardText">Precipitation: </span> ${precipitation}%
+										</p>
+										<p class="card-text">
+											<span class="cardText">Pressure: </span> ${pressure}mb
+										</p>
+										<p class="card-text">
+											<span class="cardText">Sunrise: </span> ${sr}
+										</p>
+										<p class="card-text">
+											<span class="cardText">Sunset: </span> ${ss}
+										</p>
+									</div>
+								</div>
+							</div>
+					`
 				}
 				$('#city-header').html('<h2 class="text-center">' + 'San Antonio, Texas' + '</h2>')
 				$('#forecastContainer').html(cards) // insert into html here
@@ -72,9 +83,6 @@ $(document).ready(function () {
 				container: 'map',
 				zoom: 10,
 				center: [-98.4861, 29.4252],
-				// style: {
-				//
-				// }
 				style: 'mapbox://styles/mapbox/streets-v11'
 			})
 			
@@ -148,9 +156,6 @@ $(document).ready(function () {
 					.on('dragend', () => {
 						var results = locationMarker.getLngLat()
 						var coordArr = Object.values(results)
-						// console.log(results)
-						// console.log(coordArr)
-						
 						
 						$.get('https://api.openweathermap.org/data/2.5/onecall', {
 							appid: weatherMapKey,
@@ -162,10 +167,9 @@ $(document).ready(function () {
 								reverseGeocode(results, mapBoxKey).then(function (result) {
 									$('#city-header').html('<h2 class="text-center">' + result + '</h2>');
 								})
-								// console.log(weather)
+								
 								var dailyWx = weather.daily; // stored daily weather data in variable to iterate easier
-								// console.log(dailyWx);
-								// var userLocation = $('#location-search').val();
+								
 								var cards = '';
 								for (let i = 0; i < dailyWx.length; i++) {
 									if (i <= 4) {
