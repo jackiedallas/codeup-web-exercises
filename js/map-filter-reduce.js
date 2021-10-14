@@ -41,4 +41,11 @@ $(document).ready(function () {
 	let hasOverThreeLangs = users.filter(user => user.languages.length > 2)
 	console.log(hasOverThreeLangs);
 	
+	let userEmails = users.map(user => `${user.name}'s email address is ${user.email}.`)
+	console.log(userEmails);
+	
+	let totalExperience = users.reduce((total, user) => {
+		return total + user.yearsOfExperience;
+	}, 0);
+	console.log(totalExperience + ' years of experience.');
 })
