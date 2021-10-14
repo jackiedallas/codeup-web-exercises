@@ -55,7 +55,9 @@ const favoriteRestaurants = [
 
 //TODO Together: Let's get all these restaurant names out of this array of objects with .map()!
 let restaurantNames = favoriteRestaurants.map(function (restaurant) {
-	return restaurant.name;
+	// return restaurant.name.split('').reverse().join('').toLowerCase();
+	
+	return restaurant.name + ', phone: ' + restaurant.phone;
 })
 console.log(restaurantNames);
 
@@ -81,11 +83,12 @@ console.log(restaurantNames);
 
 
 //TODO Together: Now, let's refactor the above using the ES6 .filter() method with the same goal: even numbers only!
-
+let evens = numbers.filter(number => number % 2 === 0)
+console.log(evens);
 
 //TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
-
-
+let hasBuffet = favoriteRestaurants.filter(restaurant => restaurant.restaurantFeatures.includes('buffet'));
+console.log(hasBuffet);
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
 // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
 

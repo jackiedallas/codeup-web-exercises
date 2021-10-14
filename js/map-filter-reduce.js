@@ -38,10 +38,7 @@ $(document).ready(function () {
 		}
 	];
 	
-	let userLanguages = users.map(function (user) {
-		return user.languages;
-	})
-	console.log(userLanguages);
-	
+	let hasOverThreeLangs = users.filter(user => user.languages.length > 2)
+	console.log(hasOverThreeLangs);
 	
 })
