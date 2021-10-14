@@ -41,17 +41,44 @@ $(document).ready(function () {
 	let hasOverThreeLangs = users.filter(user => user.languages.length > 2)
 	console.log(hasOverThreeLangs);
 	
+	
+	
 	// Use .map to create an array of strings where each element is a user's email address
-	let userEmails = users.map(user => `${user.name}'s email address is ${user.email}.`)
+	var userEmails = users.map(user => user.email)
 	console.log(userEmails);
+	
+	
 	
 	// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 	let totalExperience = users.reduce((total, user) => {
-		return total + user.yearsOfExperience;
+		return total + user.yearsOfExperience / users.length;
 	}, 0);
-	console.log(totalExperience + ' years of experience.');
+	console.log(totalExperience + ' average years of experience.');
+	
+	
 	
 	// Use .reduce to get the longest email from the list of users.
-	let longestEmail = users.reduce((emailLength, user) => (user.email.length > emailLength.length ? user: emailLength), '');
+	let longestEmail = userEmails.reduce(function (email, user) {
+		if (email.length > user.length) {
+			return email;
+		} else {
+			return user;
+		}
+		// return email.length > user.length ? email : user;
+	}, '')
 	console.log(longestEmail);
+	
+	//	Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+	let userNames = users.reduce((string, user, index) => {
+		if (index !== users.length-1) {
+			return string + (user.name + ', ');
+		}
+		return string + (user.name + '.')
+	}, 'The user names are: ')
+	// let userNames = users.map(user => user.name).join(', ')
+	
+	
+	// console.log('The user names are ' + userNames + '.');
+	console.log(userNames);
+	
 })

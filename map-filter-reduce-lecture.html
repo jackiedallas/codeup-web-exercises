@@ -92,6 +92,9 @@ console.log(hasBuffet);
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
 // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
 
+let shortNames = favoriteRestaurants.filter(restaurant => restaurant.name.length < 17);
+console.log(shortNames);
+
 //~ * Reduce * ~
 
 //Reduce is an interesting animal in and of itself: it's a way to reduce a collection down to, typically, a single value of some kind:
@@ -110,8 +113,35 @@ console.log(hasBuffet);
 
 let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
 
+let strLengthObj = stringArr.reduce(function (objectProp, element) {
+	objectProp[element] = element.length;
+	return objectProp;
+}, {})
+console.log(strLengthObj);
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
+
+let family = [
+	{
+		name: 'Jackie',
+		age: 29
+	},
+	{
+		name: 'Kayla',
+		age: 25
+	},
+	{
+		name: 'Jackson',
+		age: 2
+	},
+	{
+		name: 'Simon',
+		age: 0.5
+	}
+]
+
+let familyTotalAge = family.reduce((total, member) => {return total + member.age}, 0);
+console.log("Your family's total age is " + familyTotalAge + " years.");
 
 
 </script>

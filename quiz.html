@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<style>
+		#foo {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<h1 class="foo">Codeup Rocks!</h1>
+
+
+<input id="B" value="I'm so fancy">
+<button id="fancyB">Hello Test Taker!</button>
+
+<h1 id="user_display">show the input here with button click</h1>
+<input id="user_input">
+<button id="clickme">click me</button>
+<script src="js/jquery.js"></script>
+<script>
+	"use strict";
+	
+	$(document).ready(function() {
+		$('.foo').css('background-color', 'blue');
+	});
+	
+	$('#fancyB').hover(
+			function() {
+				$(this).css('background-color', 'papayawhip');
+			},
+			function() {
+				$(this).css('background-color', '#FFF');
+			}
+	);
+	
+	document.getElementById("clickme").addEventListener('click',function(){
+		document.getElementById('user_display').innerHTML = document.getElementById("user_input").value;
+	},false);
+	
+	
+	// $('#clickme').click(function(){
+	// 	$('#user_display').html($('#user_input').val());
+	// });
+</script>
+</body>
+</html>
