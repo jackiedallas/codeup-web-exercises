@@ -28,12 +28,14 @@ $(document).ready(function () {
 		})
 	
 	
-	var myPromise = new Promise((resolve, reject) => {
+	var wait = new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve('foo')
 		}, 5000);
 	});
 	
-	myPromise.then(() => console.log('You will see this after 5 seconds'))
+	wait
+		.then(() => console.log('You will see this after 5 seconds'))
+		
 	
 })
