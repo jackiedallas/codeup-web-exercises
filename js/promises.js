@@ -25,13 +25,13 @@ $(document).ready(function () {
 			})
 			.then((userInfo) => {
 				
-				var userObject = {}
+				let userObject = {}
 				let latestData = userInfo[0];
-				var date = new Date(latestData.created_at);
-				var actorInfo = latestData.actor;
-				var eventType = latestData.type;
-				var repoInfo = latestData.repo;
-				var commitInfo = latestData.payload.commits;
+				let date = new Date(latestData.created_at);
+				let actorInfo = latestData.actor;
+				let eventType = latestData.type;
+				let repoInfo = latestData.repo;
+				let commitInfo = latestData.payload.commits;
 				
 				userObject.name = actorInfo.login;
 				userObject.lastPush = date;
@@ -59,7 +59,10 @@ $(document).ready(function () {
 		})).then((number) => console.log(`You will see this message after ${number/1000} seconds`))
 	}
 	
+	wait(1000)
+	wait(2000)
 	wait(3000)
+	wait(4000)
 	wait(5000)
 	
 	
