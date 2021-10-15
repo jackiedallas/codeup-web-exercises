@@ -18,11 +18,14 @@ $(document).ready(function () {
 			var eventType = latestData.type;
 			console.log(eventType)
 			var repoInfo = latestData.repo;
+			var commitInfo = latestData.payload.commits;
+			console.log(commitInfo)
 			
 			userObject.name = actorInfo.login;
 			userObject.lastPush = date;
 			userObject.gitHubURL = actorInfo.url;
 			userObject.repoName = repoInfo.name;
+			userObject.commitMessage = commitInfo[0].message;
 			
 			console.log(userObject)
 			
