@@ -24,6 +24,8 @@ $(document).ready(function () {
 				return response.json();
 			})
 			.then((userInfo) => {
+				// console.log(userInfo[0])
+				
 				
 				let userObject = {}
 				let latestData = userInfo[0];
@@ -32,14 +34,28 @@ $(document).ready(function () {
 				let eventType = latestData.type;
 				let repoInfo = latestData.repo;
 				let commitInfo = latestData.payload.commits;
+				let img = latestData.actor.avatar_url;
+				let html = '';
 				
 				userObject.name = actorInfo.login;
 				userObject.lastPush = date;
 				userObject.gitHubURL = actorInfo.url;
 				userObject.repoName = repoInfo.name;
 				userObject.commitMessage = commitInfo[0].message;
+				console.log(userObject);
 				
-				console.log(userObject)
+				
+				// html += `
+				// 	<div class="card" style="width: 18rem;">
+				// 		<img src="${img}" class="card-img-top" alt="user-avatar">
+				// 		<div class="card-body">
+				//
+				// 		</div>
+				//
+				//
+				// 	</div>
+				// `
+				// $('#cards').html(html)
 			})
 	}
 	
@@ -58,7 +74,7 @@ $(document).ready(function () {
 			}, number)
 		})).then((number) => console.log(`You will see this message after ${number/1000} seconds`))
 	}
-	
+
 	wait(1000)
 	wait(2000)
 	wait(3000)
