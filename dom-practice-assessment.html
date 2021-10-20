@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: arial;
+        }
+        main {
+            width: 1300px;
+            margin: 0 auto 10em auto;
+            position: relative;
+            padding: 1em;
+            min-height: 100vh;
+        }
+        .section-header {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .dark-mode {
+            background-color: #444;
+            color: antiquewhite;
+        }
+        .dbl-click-box {
+            background: rosybrown;
+            color: white;
+            width: 100px;
+            height: 100px;
+            padding: 12px;
+            border: 3px solid black;
+            border-radius: 3px;
+        }
+        .hidden-letters {
+            display: flex;
+            text-align: center;
+            font-size: 2em;
+        }
+        .hidden-letters div {
+            border: 1px solid;
+            width: 100px;
+            /*padding: 2em;*/
+        }
+        .hidden-letters span {
+            visibility: hidden;
+        }
+        p {
+            font-size: 2em;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<main>
+
+    <h1 class="section-header">Problem 1</h1>
+    <div class="dbl-click-box">
+        <h3>Double-Click me!!!</h3>
+    </div>
+
+    <hr>
+
+    <h1 class="section-header">Problem 2</h1>
+    <button id="dark-mode-btn">Toggle Dark Mode</button>
+
+    <hr>
+
+    <h1 class="section-header">Problem 3</h1>
+    <h1 ><span id="uppercase">THIS IS A TITLE</span></h1>
+    <h1><span id="lowercase"></span></h1>
+
+    <hr>
+
+    <h1 class="section-header">Problem 4</h1>
+    <p><span id="counter">0</span> seconds on the page</p>
+    <h4></h4>
+
+    <hr>
+
+    <h1 class="section-header">Problem 5</h1>
+    <h3>Create</h3>
+    <form>
+        <input id="characters" type="text" placeholder="Enter text">
+        <button id="list-chars-btn">Output list characters</button>
+    </form>
+    <ul id="characters-list">
+
+    </ul>
+
+    <hr>
+
+    <h1 class="section-header">Problem 6</h1>
+    <button id="clean-animal-list-btn">Clean up animal list</button>
+    <ul id="animals-list">
+        <li class="animal-list-item">Pig</li>
+        <li>This is a...</li>
+        <li class="animal-list-item">Dog</li>
+        <li>This is a...</li>
+        <li class="animal-list-item">Cat</li>
+        <li>This is a...</li>
+        <li class="animal-list-item">Fish</li>
+        <li>This is a...</li>
+    </ul>
+
+    <hr>
+
+    <h1 class="section-header">Problem 7</h1>
+    <div class="hidden-letters">
+        <div><span>C</span></div>
+        <div><span>O</span></div>
+        <div><span>D</span></div>
+        <div><span>E</span></div>
+        <div><span>U</span></div>
+        <div><span>P</span></div>
+    </div>
+
+</main>
+<script src="js/jquery.js"></script>
+<script src="js/dom-practice-assessment.js"></script>
+</body>
+</html>
