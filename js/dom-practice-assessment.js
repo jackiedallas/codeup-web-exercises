@@ -33,10 +33,33 @@ setInterval(function () {
 	$('#counter').html(count)
 }, 1000)
 
+// 5. When the user clicks on the button (`<button id="list-chars-btn">`), take any text the user has typed in the input field (`<input id="characters">`), and output each individual character as a separate list item within the unordered list (`<ul id="characters-list">`). Clicking the button multiple times should not append additional list items.
 
-
-
-
-
-
+$('#list-chars-btn').click(function (e) {
+	e.preventDefault()
+	let input = $('#characters').val()
+	let charToPrint = '';
+	for (let i = 0; i < input.length; i++) {
+		let characters = input[i];
+		console.log(input[i])
+		if (input[i] === ' ') {
+			charToPrint += `<br>`
+		} else {
+			charToPrint += `<li>${characters}</li>`
+		}
+	}
+	$('#characters-list').html(charToPrint)
 })
+
+
+	
+
+	
+	
+	
+	
+})
+
+
+
+
