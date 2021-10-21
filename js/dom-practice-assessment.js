@@ -1,6 +1,8 @@
 /**
  * Write your solutions here
  */
+$(document).ready(function () {
+
 
 // 1. When the box with the id of `dbl-click-box` is double-clicked, an alert should pop up with the text 'BOX DOUBLE-CLICKED!'
 $('.dbl-click-box').dblclick(function () {
@@ -24,3 +26,17 @@ $('#uppercase').hover(
 	}
 )
 
+// 4. The span with an id of `counter` should increment by one every second.
+let count = 0; // count variable has to be outside the interval function
+setInterval(function () {
+	++count;
+	$('#counter').html(count)
+}, 1000)
+
+
+
+
+
+
+
+})
