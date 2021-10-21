@@ -52,6 +52,23 @@ $('#list-chars-btn').click(function (e) {
 })
 
 
+//	6. When the user clicks on the button (`<button id="clean-animal-list-btn">`), the text of each list item that has a class (`<li class="animal-list-item">`) should be concatenated to the list item that immediately follows it.
+	
+	console.log($('#animals-list').text())
+	$('#clean-animal-list-btn').click(function (e) {
+		e.preventDefault();
+		// let animalslist = $('#animals-list').toArray()
+		// let animals = $('.animal-list-item').toArray()
+		console.log(('li.animal-list-item').html() + $('li').html())
+		// console.log(animals)
+		// console.log(animalslist)
+		// for (let i = 0; i < animals.length; i++) {
+		// 	console.log(animals.nextElementSibling.text())
+		//
+		// }
+	})
+
+
 	
 
 	
